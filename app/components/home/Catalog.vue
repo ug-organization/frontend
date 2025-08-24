@@ -6,7 +6,7 @@
         <div class="catalog__item">
           <div class="catalog__image-wrapper">
             <img
-              src="/img/catalog-img-1.jpeg"
+              src="/img/catalog-img-1.webp"
               alt="Каталог 1"
               class="catalog__image"
             />
@@ -25,7 +25,7 @@
         <div class="catalog__item">
           <div class="catalog__image-wrapper">
             <img
-              src="/img/catalog-img-2.jpeg"
+              src="/img/catalog-img-2.webp"
               alt="Каталог 2"
               class="catalog__image"
             />
@@ -42,7 +42,7 @@
         <div class="catalog__item">
           <div class="catalog__image-wrapper">
             <img
-              src="/img/catalog-img-3.jpeg"
+              src="/img/catalog-img-3.webp"
               alt="Каталог 3"
               class="catalog__image"
             />

@@ -10,8 +10,8 @@
             @click="loadVideo(0)"
           >
             <img
-              src="/img/home-hero.png"
-              alt="Превью видео КНС"
+              src="/img/home-hero.webp"
+              alt="video"
               class="about-video__poster-image"
             />
             <div class="about-video__play-button">
