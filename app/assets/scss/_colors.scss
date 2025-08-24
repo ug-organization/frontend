@@ -1,0 +1,119 @@
+:root {
+	--light: #FAFAFA;
+	--primary: #054263;
+	--text-dark: #181818;
+	
+	// Select компоненты
+	--p-select-background: #ffffff !important;
+	--p-select-border-color: #e5e7eb !important;
+	--p-select-color: #054263 !important;
+	--p-select-overlay-background: #ffffff !important;
+	--p-select-overlay-color: #054263 !important;
+	--p-select-option-focus-background: #e7f5fc !important;
+	--p-select-option-focus-color: #054263 !important;
+	--p-select-option-color: #054263 !important;
+	--p-select-list-padding: 10px !important;
+	--p-select-overlay-border-color: #e5e7eb !important;
+	--p-select-overlay-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+	--p-select-option-selected-color: #ffffff !important;
+	--p-select-option-selected-focus-color: #ffffff !important;
+	--p-select-option-selected-focus-background: #0f6999 !important;
+	--p-select-option-border-radius: 8px !important;
+	--p-select-disabled-background: #f8fafc !important;
+	--p-inputtext-disabled-color: #6b7280 !important;
+	--p-select-overlay-border-radius: 8px !important;
+	
+	// Input компоненты
+	--p-input-text-color: #054263 !important;
+	--p-inputtext-color: #054263 !important;
+	--p-inputtext-background: #ffffff !important;
+	--p-inputtext-border-color: #e5e7eb !important;
+	--p-inputtext-border-radius: 8px !important;
+	--p-inputtext-focus-border-color: #0f6999 !important;
+	--p-inputtext-disabled-background: #f8fafc !important;
+	
+	// Checkbox
+	--p-checkbox-background: #ffffff !important;
+	--p-checkbox-disabled-background: #f8fafc !important;
+	
+	// Datepicker
+	--p-datepicker-dropdown-background: #054263 !important;
+	--p-datepicker-dropdown-color: #ffffff !important;
+	--p-datepicker-dropdown-border-radius: 8px !important;
+	--p-datepicker-dropdown-hover-background: #0f6999 !important;
+	--p-datepicker-panel-background: #ffffff !important;
+	--p-datepicker-date-color: #054263 !important;
+	--p-datepicker-week-day-color: #054263 !important;
+	--p-datepicker-header-background: #ffffff !important;
+	--p-datepicker-select-month-color: #054263 !important;
+	--p-datepicker-select-year-color: #054263 !important;
+	--p-datepicker-date-hover-background: #e7f5fc !important;
+	--p-datepicker-date-hover-color: #054263 !important;
+	--p-datepicker-select-month-hover-background: #e7f5fc !important;
+	--p-datepicker-select-month-hover-color: #054263 !important;
+	--p-datepicker-select-year-hover-background: #e7f5fc !important;
+	--p-datepicker-select-year-hover-color: #054263 !important;
+	--p-datepicker-date-selected-background: #054263 !important;
+	--p-datepicker-date-selected-color: #ffffff !important;
+	--p-datepicker-today-background: #0f6999 !important;
+	--p-datepicker-panel-border-color: #e5e7eb !important;
+	--p-datepicker-panel-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+	
+	// Radiobutton
+	--p-radiobutton-border-color: #e5e7eb !important;
+	--p-radiobutton-checked-border-color: #054263 !important;
+	--p-radiobutton-icon-color: #0f6999 !important;
+	--p-radiobutton-hover-border-color: #0f6999 !important;
+	--p-radiobutton-background: #ffffff !important;
+	--p-radiobutton-checked-background: #ffffff !important;
+	--p-radiobutton-checked-color: #054263 !important;
+	--p-radiobutton-checked-icon-color: #0f6999 !important;
+	--p-radiobutton-checked-hover-background: #f8fafc !important;
+	--p-radiobutton-checked-hover-color: #054263 !important;
+	--p-radiobutton-icon-checked-color: #0f6999 !important;
+	--p-radiobutton-icon-checked-hover-color: #0f6999 !important;
+	
+	// Dialog
+	--p-dialog-background: #ffffff !important;
+	--p-dialog-color: #054263 !important;
+	
+	// Autocomplete
+	--p-autocomplete-overlay-background: #ffffff !important;
+	--p-autocomplete-overlay-color: #054263 !important;
+	--p-autocomplete-option-focus-background: #e7f5fc !important;
+	--p-autocomplete-option-focus-color: #054263 !important;
+	--p-autocomplete-option-color: #054263 !important;
+	--p-autocomplete-option-selected-color: #054263 !important;
+	--p-autocomplete-option-selected-focus-color: #054263 !important;
+	--p-autocomplete-option-selected-focus-background: #e7f5fc !important;
+	--p-autocomplete-option-selected-background: #e7f5fc !important;
+	
+	// Button
+	--p-button-text-secondary-hover-background: #e7f5fc !important;
+	--p-button-text-secondary-color: #054263 !important;
+	--p-textarea-background: #ffffff !important;
+	--p-textarea-border-color: #e5e7eb !important;
+	--p-textarea-focus-border-color: #0f6999 !important;
+	--p-textarea-focus-color: #054263 !important;
+	--p-textarea-color: #054263 !important;
+	// --p-textarea-placeholder-color: #054263 !important;
+	--p-textarea-placeholder-focus-color: #054263 !important;
+	--p-textarea-placeholder-focus-background: #e7f5fc !important;
+
+	--p-select-background: #ffffff !important;
+	--p-select-border-color: #e5e7eb !important;
+	--p-select-color: #054263 !important;
+	--p-select-overlay-background: #ffffff !important;
+	--p-select-overlay-color: #054263 !important;
+	--p-select-option-focus-background: #e7f5fc !important;
+	--p-select-option-focus-color: #054263 !important;
+	--p-select-option-color: #054263 !important;
+	--p-select-option-selected-color: #ffffff !important;
+	--p-select-option-selected-focus-color: #ffffff !important;
+	--p-select-option-selected-focus-background: #0f6999 !important;
+	--p-select-option-border-radius: 8px !important;
+	--p-select-disabled-background: #f8fafc !important;
+	--p-inputtext-disabled-color: #6b7280 !important;
+	--p-select-overlay-border-radius: 8px !important;
+
+}
