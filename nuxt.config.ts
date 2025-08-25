@@ -8,7 +8,7 @@ export default defineNuxtConfig({
     '@': '../app',
     '~': '../'
   },
-  modules: ['@primevue/nuxt-module'],
+  modules: ['@primevue/nuxt-module', 'vue-yandex-maps/nuxt'],
   primevue: {
     components: {
         prefix: 'Prime',
@@ -19,5 +19,8 @@ export default defineNuxtConfig({
           preset: Aura
       }
     }
+  },
+  yandexMaps: {
+    apikey: '2fdf8b95-45b7-4493-9c89-f428d3b39d7a',
   },
 })

@@ -3,8 +3,6 @@
     <div class="container">
       <div class="header__wrapper">
         <img class="header__logo" src="/img/logo.png" alt="logo" />
-
-        <!-- Desktop contacts and media -->
         <div class="header__contacts header__contacts--desktop">
           <div class="header__contacts-item">
             <img
@@ -18,8 +16,8 @@
           </div>
           <div class="header__contacts-item">
             <img class="header__contacts-img" src="/img/mail.png" alt="mail" />
-            <a href="mailto:info@example.com" class="header__contacts-link"
-              >yug@yandex.ru</a
+            <a href="mailto:yug_ns@mail.ru" class="header__contacts-link"
+              >yug_ns@mail.ru</a
             >
           </div>
         </div>
@@ -91,7 +89,7 @@
         </div>
         <div class="header__mobile-contacts-item">
           <img src="/img/mail.png" alt="mail" />
-          <a href="mailto:yug@yandex.ru">yug@yandex.ru</a>
+          <a href="mailto:yug_ns@mail.ru">yug_ns@mail.ru</a>
         </div>
       </div>
       <nav class="header__mobile-nav">

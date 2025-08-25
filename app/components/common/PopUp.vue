@@ -46,7 +46,7 @@
                 />
               </div>
 
-              <div class="popup__form-group">
+              <!-- <div class="popup__form-group">
                 <label for="service" class="popup__label"
                   >Интересующий вас продукт</label
                 >
@@ -59,7 +59,7 @@
                   placeholder="Выберите продукт"
                   class="popup__select"
                 />
-              </div>
+              </div> -->
 
               <div class="popup__form-group">
                 <label for="message" class="popup__label">Сообщение</label>
@@ -83,12 +83,12 @@
 </template>
 
 <script lang="ts" setup>
-const optionsService = [
-  { label: 'КНС', value: 'kns' },
-  { label: 'ЛОС', value: 'los' },
-  { label: 'Насосные станции', value: 'pumping' },
-  { label: 'Все продукты', value: 'all' },
-]
+// const optionsService = [
+//   { label: 'КНС', value: 'kns' },
+//   { label: 'ЛОС', value: 'los' },
+//   { label: 'Насосные станции', value: 'pumping' },
+//   { label: 'Все продукты', value: 'all' },
+// ]
 interface PopupForm {
   name: string
   phone: string
@@ -142,113 +142,96 @@ const submitForm = () => {
 </script>
 
 <style lang="scss" scoped>
-:deep(.popup__select) {
-  width: 100%;
+// :deep(.popup__select) {
+//   width: 100%;
 
-  .p-dropdown {
-    width: 100%;
-    border: 1px solid #d1d5db;
-    border-radius: 8px;
-    background: #ffffff;
+//   .p-dropdown {
+//     width: 100%;
+//     border: 1px solid #d1d5db;
+//     border-radius: 8px;
+//     background: #ffffff;
 
-    &:hover {
-      border-color: #0f6999;
-    }
+//     &:hover {
+//       border-color: #0f6999;
+//     }
 
-    &:focus-within {
-      border-color: #054263;
-      box-shadow: 0 0 0 3px rgba(5, 66, 99, 0.1);
-    }
-  }
+//     &:focus-within {
+//       border-color: #054263;
+//       box-shadow: 0 0 0 3px rgba(5, 66, 99, 0.1);
+//     }
+//   }
 
-  .p-dropdown-label {
-    font-family: 'Onest';
-    font-size: 14px;
-    color: #374151;
-    padding: 10px 12px;
-  }
+//   .p-dropdown-label {
+//     font-family: 'Onest';
+//     font-size: 14px;
+//     color: #374151;
+//     padding: 10px 12px;
+//   }
 
-  .p-dropdown-trigger {
-    color: #6b7280;
-  }
-}
+//   .p-dropdown-trigger {
+//     color: #6b7280;
+//   }
+// }
 
 :deep(.p-inputtext) {
   width: 100%;
-  border: 1px solid #d1d5db;
   border-radius: 8px;
-  background: #ffffff;
-  padding: 10px 12px;
+  padding: 6px 12px;
   font-family: 'Onest';
   font-size: 14px;
-  color: #374151;
   transition: all 0.3s ease;
-
-  &:hover {
-    border-color: #0f6999;
-  }
-
-  &:focus {
-    border-color: #054263;
-    box-shadow: 0 0 0 3px rgba(5, 66, 99, 0.1);
-    outline: none;
-  }
-
   &::placeholder {
-    color: #9ca3af;
+    font-size: 14px;
+  }
+  @media screen and (max-width: 900px) {
+    font-size: 12px;
+    padding: 4px 12px;
+    &::placeholder {
+      font-size: 12px;
+    }
   }
 }
 
 :deep(.p-inputmask) {
   width: 100%;
-  border: 1px solid #d1d5db;
   border-radius: 8px;
-  background: #ffffff;
-  padding: 10px 12px;
+  padding: 6px 12px;
   font-family: 'Onest';
   font-size: 14px;
-  color: #374151;
   transition: all 0.3s ease;
-
-  &:hover {
-    border-color: #0f6999;
-  }
-
-  &:focus {
-    border-color: #054263;
-    box-shadow: 0 0 0 3px rgba(5, 66, 99, 0.1);
-    outline: none;
-  }
+  outline: none;
 
   &::placeholder {
-    color: #9ca3af;
+    font-size: 14px;
+  }
+  @media screen and (max-width: 900px) {
+    font-size: 12px;
+    padding: 4px 12px;
+    &::placeholder {
+      font-size: 12px;
+    }
   }
 }
 
 :deep(.p-textarea) {
   width: 100%;
-  border: 1px solid #d1d5db;
   border-radius: 8px;
-  background: #ffffff;
-  padding: 10px 12px;
+  padding: 6px 12px;
   font-family: 'Onest';
   font-size: 14px;
-  color: #374151;
   transition: all 0.3s ease;
   resize: none;
-
-  &:hover {
-    border-color: #0f6999;
-  }
-
-  &:focus {
-    border-color: #054263;
-    box-shadow: 0 0 0 3px rgba(5, 66, 99, 0.1);
-    outline: none;
-  }
+  outline: none;
 
   &::placeholder {
-    color: #9ca3af;
+    font-size: 14px;
+  }
+  @media screen and (max-width: 900px) {
+    font-size: 12px;
+    padding: 4px 12px;
+    &::placeholder {
+      font-size: 12px;
+    }
   }
 }
 .popup-overlay {
@@ -270,11 +253,14 @@ const submitForm = () => {
   background: #ffffff;
   border-radius: 16px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-  max-width: 500px;
+  max-width: 400px;
   width: 100%;
-  max-height: 90vh;
+  max-height: 700px;
   overflow-y: auto;
   position: relative;
+  @media screen and (max-width: 900px) {
+    max-width: 298px;
+  }
 }
 
 .popup__close {
@@ -297,31 +283,49 @@ const submitForm = () => {
     background: #e5e7eb;
     transform: scale(1.1);
   }
+  @media screen and (max-width: 900px) {
+    top: 10px;
+    right: 10px;
+    width: 24px;
+    height: 24px;
+  }
 }
 
 .popup__close-icon {
   font-size: 18px;
   color: #6b7280;
   font-weight: 600;
+  @media screen and (max-width: 900px) {
+    font-size: 14px;
+  }
 }
 
 .popup__content {
-  padding: 40px 30px 30px;
+  padding: 65px 30px 30px;
+  @media screen and (max-width: 900px) {
+    padding: 40px 20px 20px;
+  }
 }
 
 .popup__title {
   font-family: 'Onest';
-  font-size: 28px;
+  font-size: 20px;
   font-weight: 700;
   color: #054263;
   margin: 0 0 15px 0;
   text-align: center;
+  @media screen and (max-width: 900px) {
+    font-size: 16px;
+  }
 }
 
 .popup__form {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  @media screen and (max-width: 900px) {
+    gap: 15px;
+  }
 }
 
 .popup__description {
@@ -331,7 +335,10 @@ const submitForm = () => {
   color: #054263;
   text-align: center;
   margin: 0 0 30px 0;
-  line-height: 1.5;
+  line-height: normal;
+  @media screen and (max-width: 900px) {
+    font-size: 12px;
+  }
 }
 
 .popup__form-group {
@@ -345,6 +352,9 @@ const submitForm = () => {
   font-size: 14px;
   font-weight: 600;
   color: #054263;
+  @media screen and (max-width: 900px) {
+    font-size: 12px;
+  }
 }
 
 .popup__submit {
@@ -359,7 +369,10 @@ const submitForm = () => {
   cursor: pointer;
   transition: all 0.3s ease;
   margin-top: 10px;
-
+  @media screen and (max-width: 900px) {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
   &:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 25px rgba(5, 66, 99, 0.3);

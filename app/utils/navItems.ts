@@ -9,6 +9,6 @@ export const navItems = [
   },
   {
     title: 'Контакты',
-    to: '/',
+    to: '/contacts',
   },
 ]
