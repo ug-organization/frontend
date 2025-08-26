@@ -26,19 +26,19 @@ const handleClickOnBtnToMap = () => {
     v-model="map"
     :settings="{
       location: {
-        center: [34.358848, 53.267493],
-        zoom: 11,
+        center: [49.615552, 58.595943],
+        zoom: 16,
       },
     }"
     class="map"
     width="100%"
-    height="100%"
+    height="350px"
   >
     <yandex-map-default-scheme-layer />
     <yandex-map-default-features-layer />
     <yandex-map-marker
       position="top-center left-center"
-      :settings="{ coordinates: [34.358848, 53.267493] }"
+      :settings="{ coordinates: [49.615552, 58.595943] }"
     >
       <img class="pin" src="/img/marker.png" alt="" />
     </yandex-map-marker>
@@ -52,7 +52,7 @@ const handleClickOnBtnToMap = () => {
         style="padding: 0"
         :settings="{
           onClick: handleClickOnBtnToMap,
-          background: '#0E7477',
+          background: '#054263',
         }"
       >
         <button class="btn-reset btn-map">Посмотреть</button>
@@ -68,9 +68,9 @@ const handleClickOnBtnToMap = () => {
   object-fit: cover;
   width: 70px;
   height: 70px;
-  @media screen and (max-width: 463px) {
-    width: 50px;
-    height: 50px;
+  @media screen and (max-width: 900px) {
+    width: 40px;
+    height: 40px;
   }
 }
 .btn-map {
