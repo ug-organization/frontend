@@ -53,8 +53,8 @@
             </svg>
           </div>
           <h3 class="contacts__card-title">Email</h3>
-          <a href="mailto:yug_ns@mail.ru" class="contacts__card-link"
-            >yug_ns@mail.ru</a
+          <a href="mailto:info@yug-ns.ru" class="contacts__card-link"
+            >info@yug-ns.ru</a
           >
         </div>
 

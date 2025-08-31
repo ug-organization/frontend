@@ -8,11 +8,26 @@ export default defineNuxtConfig({
     '@': '../app',
     '~': '../'
   },
-  modules: ['@primevue/nuxt-module', 'vue-yandex-maps/nuxt'],
+  modules: ['@primevue/nuxt-module', 'vue-yandex-maps/nuxt', ['nuxt-mail', {
+    message: {
+      to: 'info@yug-ns.ru',
+    },
+    smtp: {
+      service: 'timeweb',
+      auth: {
+        user: 'info@yug-ns.ru',
+        pass: 'YugNs565620)',
+      },
+      host: "smtp.timeweb.ru",
+      port: 465,
+      secure: true,
+      requireTLS: true,
+    },
+  }], 'nuxt-mail'],
   primevue: {
     components: {
         prefix: 'Prime',
-        include: ['InputText','Select','Button','InputMask', 'Textarea']
+        include: ['InputText','Select','Button','InputMask', 'Textarea', 'InputTextarea']
     },
     options: {
       theme: {

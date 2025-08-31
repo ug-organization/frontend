@@ -16,8 +16,8 @@
           </div>
           <div class="header__contacts-item">
             <img class="header__contacts-img" src="/img/mail.png" alt="mail" />
-            <a href="mailto:yug_ns@mail.ru" class="header__contacts-link"
-              >yug_ns@mail.ru</a
+            <a href="mailto:info@yug-ns.ru" class="header__contacts-link"
+              >info@yug-ns.ru</a
             >
           </div>
         </div>
@@ -89,7 +89,7 @@
         </div>
         <div class="header__mobile-contacts-item">
           <img src="/img/mail.png" alt="mail" />
-          <a href="mailto:yug_ns@mail.ru">yug_ns@mail.ru</a>
+          <a href="mailto:info@yug-ns.ru">info@yug-ns.ru</a>
         </div>
       </div>
       <nav class="header__mobile-nav">

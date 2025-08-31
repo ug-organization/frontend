@@ -18,10 +18,11 @@
                 <label for="name" class="popup__label">Имя *</label>
                 <PrimeInputText
                   id="name"
-                  v-model="form.name"
+                  v-model="name"
                   type="text"
                   placeholder="Введите ваше имя"
                   required
+                  autocomplete="off"
                 />
               </div>
 
@@ -29,10 +30,11 @@
                 <label for="phone" class="popup__label">Телефон *</label>
                 <PrimeInputMask
                   id="phone"
-                  v-model="form.phone"
+                  v-model="phone"
                   mask="+7 (999) 999-99-99"
                   placeholder="+7 (___) ___-__-__"
                   required
+                  autocomplete="off"
                 />
               </div>
 
@@ -40,34 +42,22 @@
                 <label for="email" class="popup__label">Email</label>
                 <PrimeInputText
                   id="email"
-                  v-model="form.email"
+                  v-model="email"
                   type="email"
                   placeholder="your@email.com"
+                  required
+                  autocomplete="off"
                 />
               </div>
-
-              <!-- <div class="popup__form-group">
-                <label for="service" class="popup__label"
-                  >Интересующий вас продукт</label
-                >
-                <PrimeSelect
-                  id="service"
-                  v-model="form.service"
-                  :options="optionsService"
-                  optionLabel="label"
-                  optionValue="value"
-                  placeholder="Выберите продукт"
-                  class="popup__select"
-                />
-              </div> -->
 
               <div class="popup__form-group">
                 <label for="message" class="popup__label">Сообщение</label>
                 <PrimeTextarea
                   id="message"
-                  v-model="form.message"
+                  v-model="message"
                   placeholder="Введите ваше сообщение"
                   rows="4"
+                  autocomplete="off"
                 />
               </div>
 
@@ -75,6 +65,9 @@
                 <span class="popup__submit-text">Отправить заявку</span>
               </button>
             </form>
+            <p v-if="isSuccess" class="popup__success">
+              Спасибо! Ваша заявка отправлена.
+            </p>
           </div>
         </div>
       </div>
@@ -83,18 +76,12 @@
 </template>
 
 <script lang="ts" setup>
-// const optionsService = [
-//   { label: 'КНС', value: 'kns' },
-//   { label: 'ЛОС', value: 'los' },
-//   { label: 'Насосные станции', value: 'pumping' },
-//   { label: 'Все продукты', value: 'all' },
-// ]
-interface PopupForm {
-  name: string
-  phone: string
-  email: string
-  service: string
-  message: string
+const { name, phone, email, message, handleSubmit, resetForm, isSuccess } =
+  sendMail()
+
+const submitForm = async () => {
+  await handleSubmit(email.value, phone.value, name.value, message.value)
+  resetForm()
 }
 
 interface Props {
@@ -105,74 +92,15 @@ interface Emits {
   (e: 'close'): void
 }
 
-const props = defineProps<Props>()
+defineProps<Props>()
 const emit = defineEmits<Emits>()
-
-const form = ref<PopupForm>({
-  name: '',
-  phone: '',
-  email: '',
-  service: '',
-  message: '',
-})
 
 const closePopup = () => {
   emit('close')
-  resetForm()
-}
-
-const resetForm = () => {
-  form.value = {
-    name: '',
-    phone: '',
-    email: '',
-    service: '',
-    message: '',
-  }
-}
-
-const submitForm = () => {
-  // Здесь будет логика отправки формы
-  console.log('Форма отправлена:', form.value)
-  alert(
-    'Спасибо! Ваша заявка отправлена. Мы свяжемся с вами в ближайшее время.'
-  )
-  closePopup()
 }
 </script>
 
 <style lang="scss" scoped>
-// :deep(.popup__select) {
-//   width: 100%;
-
-//   .p-dropdown {
-//     width: 100%;
-//     border: 1px solid #d1d5db;
-//     border-radius: 8px;
-//     background: #ffffff;
-
-//     &:hover {
-//       border-color: #0f6999;
-//     }
-
-//     &:focus-within {
-//       border-color: #054263;
-//       box-shadow: 0 0 0 3px rgba(5, 66, 99, 0.1);
-//     }
-//   }
-
-//   .p-dropdown-label {
-//     font-family: 'Onest';
-//     font-size: 14px;
-//     color: #374151;
-//     padding: 10px 12px;
-//   }
-
-//   .p-dropdown-trigger {
-//     color: #6b7280;
-//   }
-// }
-
 :deep(.p-inputtext) {
   width: 100%;
   border-radius: 8px;
@@ -263,6 +191,13 @@ const submitForm = () => {
   }
 }
 
+.popup__success {
+  font-family: 'Onest';
+  font-size: 14px;
+  color: #025b0f;
+  text-align: center;
+  margin-top: 10px;
+}
 .popup__close {
   position: absolute;
   top: 20px;

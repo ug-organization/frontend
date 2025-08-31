@@ -15,7 +15,7 @@
                 Канализационные насосные станции
               </h3>
 
-              <NuxtLink to="/" class="btn-reset catalog__button">
+              <NuxtLink to="/product" class="btn-reset catalog__button">
                 Смотреть подробнее
               </NuxtLink>
             </div>
@@ -32,7 +32,7 @@
             <div class="catalog__overlay">
               <h3 class="catalog__item-title">Локальные очистные сооружения</h3>
 
-              <NuxtLink to="/" class="catalog__button">
+              <NuxtLink to="/product" class="catalog__button">
                 Смотреть подробнее
               </NuxtLink>
             </div>
@@ -49,7 +49,7 @@
             <div class="catalog__overlay">
               <h3 class="catalog__item-title">Насосные станции</h3>
 
-              <NuxtLink to="/" class="catalog__button">
+              <NuxtLink to="/product" class="catalog__button">
                 Смотреть подробнее
               </NuxtLink>
             </div>
