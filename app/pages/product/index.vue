@@ -6,15 +6,15 @@
         <h1 class="product__title">НАСОСНЫЕ СТАНЦИИ ВОДОСНАБЖЕНИЯ</h1>
         <div class="product__hero-content">
           <p class="product__description">
-            Насосная станция водоснабжения "АСТРЕЙ" изготавливается как серийное
-            изделие в виде готового к эксплуатации комплекса, в состав которого
-            входят: насосное оборудование, система управления, запорная
-            арматура, система трубной обвязки (коллекторы), элементы КИП
+            Насосная станция водоснабжения изготавливается как серийное изделие
+            в виде готового к эксплуатации комплекса, в состав которого входят:
+            насосное оборудование, система управления, запорная арматура,
+            система трубной обвязки (коллекторы), элементы КИП
             (контрольно-измерительные приборы), смонтированные на общей
             раме-основании.
           </p>
           <div class="product__hero-images">
-            <img src="/img/1.jpeg" alt="product-img-1" class="product__img" />
+            <img src="/img/41.jpeg" alt="product-img-1" class="product__img" />
             <img src="/img/2.jpeg" alt="product-img-2" class="product__img" />
           </div>
         </div>
@@ -64,7 +64,7 @@
       <!-- Features Section -->
       <div class="product__section">
         <h3 class="product__subtitle">
-          Основные функции автоматических насосных станций "АСТРЕЙ":
+          Основные функции автоматических насосных станций:
         </h3>
         <div class="product__features-grid">
           <ul class="product__list">
@@ -155,13 +155,12 @@
         <div class="product__section-content">
           <div class="product__text-content">
             <p class="product__description">
-              Автоматические насосные установки пожаротушения "АСТРЕЙ" выполнены
-              с учетом всех требований СП и СНИП и оснащены только
-              высококачественными и надежными комплектующими, зарекомендовавших
-              себя производителей.
+              Автоматические насосные установки пожаротушения выполнены с учетом
+              всех требований СП и СНИП и оснащены только высококачественными и
+              надежными комплектующими, зарекомендовавших себя производителей.
             </p>
             <p class="product__description">
-              Стандартная комплектация автоматических насосных станций "АСТРЕЙ"
+              Стандартная комплектация автоматических насосных станций
               представлена:
             </p>
             <ul class="product__list">
@@ -190,8 +189,8 @@
             Возможны дополнительные опции по техническому заданию Заказчика!
           </p>
           <p class="product__subtitle">
-            Автоматические насосные установки "АСТРЕЙ" эффективно выполняют
-            следущие задачи:
+            Автоматические насосные установки "" эффективно выполняют следущие
+            задачи:
           </p>
         </div>
         <div class="product__options-content">
@@ -228,9 +227,21 @@
           </ul>
           <div class="product__options-images">
             <img src="/img/11.jpeg" alt="product-img-11" class="product__img" />
-            <img src="/img/12.jpeg" alt="product-img-12" class="product__img" />
-            <img src="/img/13.jpeg" alt="product-img-13" class="product__img" />
-            <img src="/img/14.jpeg" alt="product-img-14" class="product__img" />
+            <img
+              src="/img/001.jpeg"
+              alt="product-img-12"
+              class="product__img"
+            />
+            <img
+              src="/img/002.jpeg"
+              alt="product-img-13"
+              class="product__img"
+            />
+            <img
+              src="/img/003.jpeg"
+              alt="product-img-14"
+              class="product__img"
+            />
           </div>
         </div>
       </div>
@@ -246,13 +257,13 @@
               class="product__img product__img--large"
             />
             <p class="product__description">
-              Блочно-модульная насосная станция "АСТРЕЙ" производства компании
-              ООО «КПСБО ЮГ» представляет собой автоматизированный комплекс,
-              состоящий из утепленного блок-контейнера или подземного
-              стеклопластикового корпуса (при подземном исполнении) со всеми
-              необходимыми инженерными системами (отопление, вентиляция,
-              освещение, пожаротушение); насосами, трубопроводной арматурой,
-              автоматикой и другим дополнительным оборудованием.
+              Блочно-модульная насосная станция производства компании ООО « ЮГ»
+              представляет собой автоматизированный комплекс, состоящий из
+              утепленного блок-контейнера или подземного стеклопластикового
+              корпуса (при подземном исполнении) со всеми необходимыми
+              инженерными системами (отопление, вентиляция, освещение,
+              пожаротушение); насосами, трубопроводной арматурой, автоматикой и
+              другим дополнительным оборудованием.
             </p>
             <p class="product__description">
               Блочно-модульные насосные станции используются в системах
@@ -271,7 +282,7 @@
         </div>
         <div class="product__modular-additional">
           <p class="product__description">
-            Блочномодульная насосная станция производства компании ООО КПСБО ЮГ
+            Блочномодульная насосная станция производства компании ООО ЮГ
             представляет собой автоматизированный комплекс, состоящий из
             утепленного блок-контейнера или подземного стеклопластикового
             корпуса со всеми необходимыми инженерными системами (отопление,
@@ -292,8 +303,8 @@
         <div class="product__modular-info">
           <div class="product__modular-applications">
             <p class="product__description">
-              Компания «КПСБО ЮГ» изготавливаемт блочно-модульные насосные
-              станции следующего назначения:
+              Компания «ЮГ» изготавливаемт блочно-модульные насосные станции
+              следующего назначения:
             </p>
             <ul class="product__list">
               <li class="product__item">
@@ -308,8 +319,8 @@
           </div>
           <div class="product__modular-advantages">
             <p class="product__description">
-              Преимущества блочно-модульных насосных станций «АСТРЕЙ»
-              производства компании ООО «КПСБО ЮГ»:
+              Преимущества блочно-модульных насосных станций производства
+              компании ООО « ЮГ»:
             </p>
             <ul class="product__list">
               <li class="product__item">
@@ -336,13 +347,13 @@
       </div>
 
       <!-- Modular Buildings Section -->
-      <div class="product__section">
+      <!-- <div class="product__section">
         <h3 class="product__subtitle">
           МОДУЛЬНЫЕ ЗДАНИЯ РАЗЛИЧНОГО НАЗНАЧЕНИЯ
         </h3>
         <div class="product__buildings-content">
           <p class="product__description">
-            В ассортименте компании ООО «КПСБО ЮГ» более 40 сорока наименований
+            В ассортименте компании ООО «ЮГ» более 40 сорока наименований
             готовой продукции модульных зданий различного назначения: автономные
             и неавтономные туалетные модули, модули охраны, насосные станции
             автоматического полива, технические помещения, помещения
@@ -360,7 +371,7 @@
             <img src="/img/23.jpeg" alt="product-img-23" class="product__img" />
           </div>
         </div>
-      </div>
+      </div> -->
 
       <!-- Water Treatment Section -->
       <div class="product__section">
@@ -381,7 +392,7 @@
               Вашего технологического проекта.
             </p>
             <p class="product__description">
-              Компания «КПСБО ЮГ» предпологает следующий комплекс работ:
+              Компания «ЮГ» предпологает следующий комплекс работ:
             </p>
           </div>
           <ul class="product__list">
@@ -518,14 +529,11 @@
 
 <style lang="scss" scoped>
 .product {
-  padding: 80px 0 120px 0;
+  padding: 100px 0 100px 0;
   background: #f8fafc;
 
-  @media screen and (max-width: 1200px) {
-    padding: 80px 0 100px 0;
-  }
   @media screen and (max-width: 900px) {
-    padding: 30px 0 80px 0;
+    padding: 70px 0 70px 0;
   }
 
   .container {
@@ -536,20 +544,26 @@
 
   // Hero Section
   &__hero {
-    margin-bottom: 80px;
+    margin-bottom: 50px;
     text-align: center;
+    @media screen and (max-width: 900px) {
+      margin-bottom: 25px;
+    }
   }
 
   &__title {
     font-family: 'Onest';
-    font-size: 42px;
+    font-size: 28px;
     font-weight: 700;
     color: #054263;
     margin-bottom: 40px;
     line-height: 1.2;
 
-    @media screen and (max-width: 768px) {
-      font-size: 32px;
+    @media screen and (max-width: 1200px) {
+      font-size: 24px;
+    }
+    @media screen and (max-width: 900px) {
+      font-size: 20px;
       margin-bottom: 30px;
     }
   }
@@ -586,16 +600,17 @@
 
   // Section Blocks
   &__section {
-    margin-bottom: 80px;
+    margin-bottom: 50px;
     padding: 40px;
     background: #ffffff;
     border-radius: 12px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     border: 1px solid #e5e7eb;
-
     @media screen and (max-width: 768px) {
       padding: 30px 20px;
-      margin-bottom: 60px;
+    }
+    @media screen and (max-width: 900px) {
+      margin-bottom: 25px;
     }
   }
 
@@ -625,14 +640,16 @@
 
   &__subtitle {
     font-family: 'Onest';
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 600;
     color: #054263;
     margin-bottom: 30px;
     line-height: 1.3;
 
-    @media screen and (max-width: 768px) {
-      font-size: 24px;
+    @media screen and (max-width: 1200px) {
+      font-size: 20px;
+    }
+    @media screen and (max-width: 900px) {
       margin-bottom: 25px;
     }
 

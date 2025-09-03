@@ -66,7 +66,7 @@
             </NuxtLink>
           </div> -->
           <p class="hero__description">
-            Компания «КПСБО ЮГ» была основана в 2008 году, как инжиниринговая
+            Компания «ЮГ» была основана в 2008 году, как инжиниринговая
             организация со сферой деятельности, заключающейся в реализации
             проектов по тепло и водоснабжению, водоподготовке и водоотведению,
             пожаротушению и вентиляции. Компания предоставляет полный комплекс
@@ -100,17 +100,14 @@
 
 <style lang="scss" scoped>
 .hero {
-  padding: 100px 0 150px 0;
-  @media screen and (max-width: 1200px) {
-    padding: 80px 0 100px 0;
-  }
+  padding: 100px 0 50px 0;
   @media screen and (max-width: 900px) {
-    padding: 70px 0 80px 0;
+    padding: 70px 0 25px 0;
   }
   &__wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 38px;
+    gap: 25px;
     align-items: center;
     @media screen and (max-width: 1200px) {
       grid-template-columns: 1fr;

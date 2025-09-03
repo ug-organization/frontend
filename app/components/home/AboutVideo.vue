@@ -143,14 +143,25 @@
 interface Video {
   url: string
   loaded: boolean
+  allow: string
 }
 
 const videos = ref<Video[]>([
   {
-    url: 'https://vkvideo.ru/video_ext.php?oid=-221434187&id=456239049&hd=2&autoplay=1',
+    url: 'https://rutube.ru/play/embed/1b2d6144aeeb0a2083a126b4785d1b48',
     loaded: false,
+    allow: 'clipboard-write; autoplay',
   },
 ])
+
+// <iframe
+//         width="720"
+//         height="405"
+//         src="https://rutube.ru/play/embed/1b2d6144aeeb0a2083a126b4785d1b48"
+//         frameBorder="0"
+//         allow="clipboard-write; autoplay"
+//         allowFullScreen
+//       ></iframe>
 
 const loadVideo = (index: number) => {
   if (videos.value[index]) {
@@ -163,6 +174,10 @@ const loadVideo = (index: number) => {
 .about-video {
   background: #ffffff;
   padding: 0px 0 50px 0;
+  padding: 0 0 50px 0;
+  @media screen and (max-width: 900px) {
+    padding: 0px 0 25px 0;
+  }
   &__title {
     font-family: 'Onest';
     font-size: 36px;
@@ -218,7 +233,7 @@ const loadVideo = (index: number) => {
   &__poster-image {
     width: 100%;
     height: 100%;
-    object-position: top 20% left 20%;
+    object-position: top 15% right 0;
     object-fit: cover;
   }
 

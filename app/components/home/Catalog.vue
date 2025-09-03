@@ -66,12 +66,12 @@ import { NuxtLink } from '#components'
 
 <style lang="scss" scoped>
 .catalog {
-  padding: 80px 0 120px 0;
-  @media screen and (max-width: 1200px) {
-    padding: 80px 0 100px 0;
-  }
+  padding: 0px 0 50px 0;
+  // @media screen and (max-width: 1200px) {
+  //   padding: 80px 0 100px 0;
+  // }
   @media screen and (max-width: 900px) {
-    padding: 30px 0 80px 0;
+    padding: 0px 0 25px 0;
   }
   &__title {
     font-family: 'Onest';
@@ -104,6 +104,7 @@ import { NuxtLink } from '#components'
     border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid #8b4513;
   }
 
   &__image-wrapper {

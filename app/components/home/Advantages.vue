@@ -5,9 +5,9 @@
 
       <div class="advantages__grid">
         <div class="advantages__item">
-          <div class="advantages__icon">
+          <!-- <div class="advantages__icon">
             <img src="/img/icons/money.svg" alt="Деньги" />
-          </div>
+          </div> -->
           <div class="advantages__content">
             <h4 class="advantages__subtitle">Индивидуальные скидки</h4>
             <p class="advantages__text">
@@ -17,9 +17,9 @@
         </div>
 
         <div class="advantages__item">
-          <div class="advantages__icon">
-            <img src="/img/icons/building.svg" alt="Здание" />
-          </div>
+          <!-- <div class="advantages__icon">
+                <img src="/img/icons/building.svg" alt="Здание" />
+              </div> -->
           <div class="advantages__content">
             <h4 class="advantages__subtitle">Специальные условия</h4>
             <p class="advantages__text">
@@ -31,9 +31,9 @@
         </div>
 
         <div class="advantages__item">
-          <div class="advantages__icon">
+          <!-- <div class="advantages__icon">
             <img src="/img/icons/team.svg" alt="Команда" />
-          </div>
+          </div> -->
           <div class="advantages__content">
             <h4 class="advantages__subtitle">Опытная команда</h4>
             <p class="advantages__text">
@@ -47,9 +47,9 @@
         </div>
 
         <div class="advantages__item">
-          <div class="advantages__icon">
+          <!-- <div class="advantages__icon">
             <img src="/img/icons/lightning.svg" alt="Молния" />
-          </div>
+          </div> -->
           <div class="advantages__content">
             <h4 class="advantages__subtitle">Быстрые поставки</h4>
             <p class="advantages__text">Точные и кратчайшие сроки поставки</p>
@@ -57,9 +57,9 @@
         </div>
 
         <div class="advantages__item">
-          <div class="advantages__icon">
-            <img src="/img/icons/refresh.svg" alt="Обновление" />
-          </div>
+          <!-- <div class="advantages__icon">
+              <img src="/img/icons/refresh.svg" alt="Обновление" />
+            </div> -->
           <div class="advantages__content">
             <h4 class="advantages__subtitle">Гибкость в замене</h4>
             <p class="advantages__text">
@@ -71,9 +71,9 @@
         </div>
 
         <div class="advantages__item">
-          <div class="advantages__icon">
+          <!-- <div class="advantages__icon">
             <img src="/img/icons/check.svg" alt="Галочка" />
-          </div>
+          </div> -->
           <div class="advantages__content">
             <h4 class="advantages__subtitle">Гарантия качества</h4>
             <p class="advantages__text">
@@ -98,12 +98,11 @@
 
 <style lang="scss" scoped>
 .advantages {
-  padding: 0px 0 120px 0;
+  padding: 0px 0 100px 0;
   background: #ffffff;
   @media screen and (max-width: 900px) {
-    padding: 0 0 80px 0;
+    padding: 0 0 70px 0;
   }
-
   &__title {
     font-family: 'Onest';
     font-size: 32px;
@@ -115,7 +114,7 @@
       font-size: 24px;
     }
     @media screen and (max-width: 900px) {
-      margin: 0 0 20px 0;
+      margin: 0 0 25px 0;
       font-size: 20px;
       text-align: left;
     }
@@ -123,33 +122,23 @@
 
   &__grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 25px;
     margin-bottom: 50px;
-    @media screen and (max-width: 1200px) {
-      grid-template-columns: repeat(1, 1fr);
-      gap: 20px;
-    }
   }
 
-  &__item {
-    display: flex;
-    gap: 20px;
-    padding: 25px;
-    background: #ffffff;
-    border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    border: 1px solid #e5e7eb;
-    transition: transform 0.3s ease;
-    @media screen and (max-width: 900px) {
-      align-items: center;
-      padding: 20px;
-    }
-    &:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-    }
-  }
+  // &__item {
+  //   display: flex;
+  //   gap: 20px;
+  //   padding: 25px;
+  //   background: #ffffff;
+  //   border-radius: 16px;
+  //   border: 1px solid #e5e7eb;
+  //   @media screen and (max-width: 900px) {
+  //     align-items: center;
+  //     padding: 20px;
+  //   }
+  // }
 
   &__icon {
     flex-shrink: 0;
@@ -187,7 +176,7 @@
     font-size: 18px;
     font-weight: 700;
     color: #054263;
-    margin: 0 0 10px 0;
+    // margin: 0 0 10px 0;
     line-height: 1.3;
     @media screen and (max-width: 1200px) {
       font-size: 16px;

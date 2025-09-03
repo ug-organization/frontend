@@ -11,9 +11,9 @@
       <div class="about__main-info">
         <div class="about__description-card">
           <p class="about__description-text">
-            <strong>КПСБО</strong> — инжиниринговая организация,
-            специализирующаяся на реализации проектов по тепло- и водоснабжению,
-            водоподготовке и водоотведению, пожаротушению и вентиляции.
+            <strong>ЮГ</strong> — инжиниринговая организация, специализирующаяся
+            на реализации проектов по тепло- и водоснабжению, водоподготовке и
+            водоотведению, пожаротушению и вентиляции.
           </p>
         </div>
         <div class="about__features">
@@ -170,14 +170,10 @@
 
 <style lang="scss" scoped>
 .about {
-  padding: 120px 0 100px 0;
+  padding: 100px 0 100px 0;
 
-  @media screen and (max-width: 1200px) {
-    padding: 100px 0 80px 0;
-  }
-
-  @media screen and (max-width: 768px) {
-    padding: 80px 0 60px 0;
+  @media screen and (max-width: 900px) {
+    padding: 70px 0 70px 0;
   }
 
   .container {
@@ -229,7 +225,10 @@
 
   // Основная информация
   &__main-info {
-    margin-bottom: 80px;
+    margin-bottom: 50px;
+    @media screen and (max-width: 900px) {
+      margin-bottom: 25px;
+    }
   }
 
   &__description-card {
@@ -343,10 +342,13 @@
 
   // Секции
   &__section {
-    margin-bottom: 80px;
+    margin-bottom: 50px;
 
-    @media screen and (max-width: 768px) {
-      margin-bottom: 60px;
+    @media screen and (max-width: 900px) {
+      margin-bottom: 25px;
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 

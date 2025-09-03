@@ -59,7 +59,7 @@
           </nav>
         </div>
 
-        <button
+        <!-- <button
           class="header__burger"
           :class="{ 'header__burger--active': isMobileMenuOpen }"
           @click="toggleMobileMenu"
@@ -68,7 +68,7 @@
           <span class="header__burger-line"></span>
           <span class="header__burger-line"></span>
           <span class="header__burger-line"></span>
-        </button>
+        </button> -->
       </div>
     </div>
 
@@ -146,10 +146,6 @@ const closePopup = () => {
   isPopupOpen.value = false
 }
 
-const toggleMobileMenu = () => {
-  isMobileMenuOpen.value = !isMobileMenuOpen.value
-}
-
 const closeMobileMenu = () => {
   isMobileMenuOpen.value = false
 }
@@ -170,6 +166,11 @@ const closeMobileMenu = () => {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    gap: 50px;
+    @media screen and (max-width: 669px) {
+      gap: 23px;
+      justify-content: center;
+    }
   }
 
   &__logo {
@@ -186,11 +187,11 @@ const closeMobileMenu = () => {
     flex-direction: column;
     gap: 10px;
 
-    &--desktop {
-      @media screen and (max-width: 1200px) {
-        display: none;
-      }
-    }
+    // &--desktop {
+    //   @media screen and (max-width: 1200px) {
+    //     display: none;
+    //   }
+    // }
 
     &-img {
       width: 32px;
@@ -252,6 +253,7 @@ const closeMobileMenu = () => {
     @media screen and (max-width: 1200px) {
       width: 100%;
     }
+
     &:hover {
       background: #0f6999;
       box-shadow: 0 4px 16px rgba(15, 105, 153, 0.3);
@@ -297,6 +299,9 @@ const closeMobileMenu = () => {
       @media screen and (max-width: 1200px) {
         font-size: 14px;
       }
+      @media screen and (max-width: 669px) {
+        padding: 5px 10p x 5px 34px;
+      }
     }
   }
 
@@ -308,12 +313,16 @@ const closeMobileMenu = () => {
     @media screen and (max-width: 1200px) {
       gap: 10px;
     }
-
-    &--desktop {
-      @media screen and (max-width: 1200px) {
-        display: none;
-      }
+    @media screen and (max-width: 669px) {
+      align-items: center;
+      flex-direction: column-reverse;
     }
+
+    // &--desktop {
+    //   @media screen and (max-width: 1200px) {
+    //     display: none;
+    //   }
+    // }
   }
 
   &__menu {
