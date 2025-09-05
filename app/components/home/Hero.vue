@@ -100,14 +100,14 @@
 
 <style lang="scss" scoped>
 .hero {
-  padding: 100px 0 50px 0;
+  padding: 15px 0 15px 0;
   @media screen and (max-width: 900px) {
-    padding: 70px 0 25px 0;
+    padding: 15px 0 15px 0;
   }
   &__wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 25px;
+    gap: 15px;
     align-items: center;
     @media screen and (max-width: 1200px) {
       grid-template-columns: 1fr;
@@ -148,7 +148,7 @@
     font-family: 'Onest';
     font-size: 18px;
     font-weight: 400;
-    line-height: 1.8;
+    line-height: normal;
     color: #054263;
     text-align: center;
     @media screen and (max-width: 1200px) {

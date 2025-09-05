@@ -22,43 +22,51 @@
           </div>
         </div>
 
-        <div class="header__media header__media--desktop">
-          <a href="/" class="header__media-link">
-            <img
-              class="header__contacts-img"
-              src="/img/telegram.png"
-              alt="telegram"
-            />
-          </a>
-
-          <a href="/" class="header__media-link">
-            <img
-              class="header__contacts-img"
-              src="/img/whatsapp.png"
-              alt="whatsapp"
-            />
-          </a>
-        </div>
-
         <div class="header__navigation header__navigation--desktop">
-          <button class="btn-reset header__button" @click="openPopup">
-            <span class="header__button-text">Отправить заявку</span>
-          </button>
-          <nav class="header__menu">
-            <ul class="list-reset header__menu-list">
-              <li
-                v-for="(item, index) in navItems"
-                :key="index"
-                class="header__menu-item"
-              >
-                <NuxtLink :to="item.to" class="header__menu-link">{{
-                  item.title
-                }}</NuxtLink>
-              </li>
-            </ul>
-          </nav>
-        </div>
+          <div class="header__media header__media--desktop">
+            <a
+              href="https://t.me/+79123744193"
+              class="header__media-link"
+              target="_blank"
+            >
+              <img
+                class="header__contacts-img"
+                src="/img/telegram.png"
+                alt="telegram"
+              />
+            </a>
 
+            <a
+              href="https://api.whatsapp.com/send?phone=79123744193"
+              class="header__media-link"
+              target="_blank"
+            >
+              <img
+                class="header__contacts-img"
+                src="/img/whatsapp.png"
+                alt="whatsapp"
+              />
+            </a>
+          </div>
+          <div class="header__navigation-item">
+            <button class="btn-reset header__button" @click="openPopup">
+              <span class="header__button-text">Отправить заявку</span>
+            </button>
+            <nav class="header__menu">
+              <ul class="list-reset header__menu-list">
+                <li
+                  v-for="(item, index) in navItems"
+                  :key="index"
+                  class="header__menu-item"
+                >
+                  <NuxtLink :to="item.to" class="header__menu-link">{{
+                    item.title
+                  }}</NuxtLink>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
         <!-- <button
           class="header__burger"
           :class="{ 'header__burger--active': isMobileMenuOpen }"
@@ -233,11 +241,11 @@ const closeMobileMenu = () => {
       gap: 5px;
     }
 
-    &--desktop {
-      @media screen and (max-width: 1200px) {
-        display: none;
-      }
-    }
+    // &--desktop {
+    //   @media screen and (max-width: 1200px) {
+    //     display: none;
+    //   }
+    // }
   }
 
   &__button {
@@ -307,15 +315,15 @@ const closeMobileMenu = () => {
 
   &__navigation {
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 15px;
-    @media screen and (max-width: 1200px) {
-      gap: 10px;
-    }
-    @media screen and (max-width: 669px) {
-      align-items: center;
+    align-items: center;
+    gap: 60px;
+    // @media screen and (max-width: 1200px) {
+    //   gap: 10px;
+    // }
+    @media screen and (max-width: 781px) {
+      flex-direction: column;
       flex-direction: column-reverse;
+      gap: 10px;
     }
 
     // &--desktop {
@@ -323,6 +331,15 @@ const closeMobileMenu = () => {
     //     display: none;
     //   }
     // }
+    &-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      @media screen and (max-width: 1200px) {
+        gap: 10px;
+      }
+    }
   }
 
   &__menu {

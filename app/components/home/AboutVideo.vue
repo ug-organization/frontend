@@ -173,10 +173,10 @@ const loadVideo = (index: number) => {
 <style lang="scss" scoped>
 .about-video {
   background: #ffffff;
-  padding: 0px 0 50px 0;
-  padding: 0 0 50px 0;
+  padding: 0px 0 15px 0;
+  padding: 0 0 15px 0;
   @media screen and (max-width: 900px) {
-    padding: 0px 0 25px 0;
+    padding: 0px 0 15px 0;
   }
   &__title {
     font-family: 'Onest';

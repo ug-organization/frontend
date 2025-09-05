@@ -98,33 +98,32 @@
 
 <style lang="scss" scoped>
 .advantages {
-  padding: 0px 0 100px 0;
+  padding: 0px 0 15px 0;
   background: #ffffff;
   @media screen and (max-width: 900px) {
-    padding: 0 0 70px 0;
+    padding: 0 0 15px 0;
   }
   &__title {
     font-family: 'Onest';
-    font-size: 32px;
+    font-size: 28px;
     font-weight: 700;
     color: #054263;
     text-align: center;
-    margin: 0 0 50px 0;
+    margin: 0 0 15px 0;
     @media screen and (max-width: 1200px) {
       font-size: 24px;
     }
     @media screen and (max-width: 900px) {
-      margin: 0 0 25px 0;
+      margin: 0 0 15px 0;
       font-size: 20px;
-      text-align: left;
     }
   }
 
   &__grid {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    gap: 25px;
-    margin-bottom: 50px;
+    gap: 15px;
+    margin-bottom: 15px;
   }
 
   // &__item {

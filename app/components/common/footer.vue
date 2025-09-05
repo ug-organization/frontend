@@ -45,14 +45,22 @@
               >
             </div>
             <div class="footer__social">
-              <a href="/" class="footer__social-link">
+              <a
+                href="https://t.me/+79123744193"
+                class="footer__social-link"
+                target="_blank"
+              >
                 <img
                   src="/img/telegram-footer.png"
                   alt="telegram"
                   class="footer__social-icon"
                 />
               </a>
-              <a href="/" class="footer__social-link">
+              <a
+                href="https://api.whatsapp.com/send?phone=79123744193"
+                class="footer__social-link"
+                target="_blank"
+              >
                 <img
                   src="/img/whatsapp-footer.png"
                   alt="whatsapp"

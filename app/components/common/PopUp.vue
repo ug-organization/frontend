@@ -14,7 +14,7 @@
             </p>
 
             <form class="popup__form" @submit.prevent="submitForm">
-              <div class="popup__form-group">
+              <!-- <div class="popup__form-group">
                 <label for="name" class="popup__label">Имя *</label>
                 <PrimeInputText
                   id="name"
@@ -24,7 +24,7 @@
                   required
                   autocomplete="off"
                 />
-              </div>
+              </div> -->
 
               <div class="popup__form-group">
                 <label for="phone" class="popup__label">Телефон *</label>
@@ -38,17 +38,17 @@
                 />
               </div>
 
-              <div class="popup__form-group">
-                <label for="email" class="popup__label">Email</label>
-                <PrimeInputText
-                  id="email"
-                  v-model="email"
-                  type="email"
-                  placeholder="your@email.com"
-                  required
-                  autocomplete="off"
-                />
-              </div>
+              <!-- <div class="popup__form-group">
+                  <label for="email" class="popup__label">Email</label>
+                  <PrimeInputText
+                    id="email"
+                    v-model="email"
+                    type="email"
+                    placeholder="your@email.com"
+                    required
+                    autocomplete="off"
+                  />
+                </div> -->
 
               <div class="popup__form-group">
                 <label for="message" class="popup__label">Сообщение</label>
@@ -61,6 +61,42 @@
                 />
               </div>
 
+              <div class="popup__form-group">
+                <label for="file" class="popup__label">Прикрепить файл</label>
+                <div class="popup__file-upload">
+                  <input
+                    id="file"
+                    ref="fileInput"
+                    type="file"
+                    accept=".pdf,.doc,.docx,.jpg,.jpeg,.png,.gif,.txt"
+                    @change="handleFileSelect"
+                    class="popup__file-input"
+                  />
+                  <label for="file" class="popup__file-label">
+                    <span class="popup__file-icon">📎</span>
+                    <span class="popup__file-text">
+                      {{ file ? file.name : 'Выберите файл' }}
+                    </span>
+                  </label>
+                  <button
+                    v-if="file"
+                    type="button"
+                    @click="removeFile"
+                    class="popup__file-remove"
+                  >
+                    ✕
+                  </button>
+                </div>
+                <p class="popup__file-hint">
+                  Поддерживаемые форматы: PDF, DOC, DOCX, JPG, PNG, GIF, TXT (до
+                  10 МБ)
+                </p>
+              </div>
+              <span class="popup__policy"
+                >Нажимая на кнопку, вы даёте согласие на обработку персональных
+                данных, указанных в форме обратной связи, Оператору в целях
+                коммуникации со мной.
+              </span>
               <button type="submit" class="popup__submit">
                 <span class="popup__submit-text">Отправить заявку</span>
               </button>
@@ -76,12 +112,34 @@
 </template>
 
 <script lang="ts" setup>
-const { name, phone, email, message, handleSubmit, resetForm, isSuccess } =
-  sendMail()
+const { phone, message, file, handleSubmit, isSuccess } = sendMail()
+
+const fileInput = ref<HTMLInputElement | null>(null)
+
+const handleFileSelect = (event: Event) => {
+  const target = event.target as HTMLInputElement
+  if (target.files && target.files[0]) {
+    const selectedFile = target.files[0]
+
+    // Проверяем размер файла (10 МБ)
+    if (selectedFile.size > 10 * 1024 * 1024) {
+      alert('Размер файла не должен превышать 10 МБ')
+      return
+    }
+
+    file.value = selectedFile
+  }
+}
+
+const removeFile = () => {
+  file.value = null
+  if (fileInput.value) {
+    fileInput.value.value = ''
+  }
+}
 
 const submitForm = async () => {
-  await handleSubmit(email.value, phone.value, name.value, message.value)
-  resetForm()
+  await handleSubmit(phone.value, message.value, file.value)
 }
 
 interface Props {
@@ -191,6 +249,16 @@ const closePopup = () => {
   }
 }
 
+.popup__policy {
+  font-family: 'Onest';
+  font-size: 14px;
+  color: #054263;
+}
+.popup__policy-link {
+  font-family: 'Onest';
+  font-size: 14px;
+  color: #054263;
+}
 .popup__success {
   font-family: 'Onest';
   font-size: 14px;
@@ -289,6 +357,93 @@ const closePopup = () => {
   color: #054263;
   @media screen and (max-width: 900px) {
     font-size: 12px;
+  }
+}
+
+.popup__file-upload {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.popup__file-input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.popup__file-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border: 2px dashed #d1d5db;
+  border-radius: 8px;
+  background: #f9fafb;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex: 1;
+  font-family: 'Onest';
+  font-size: 14px;
+  color: #6b7280;
+
+  &:hover {
+    border-color: #0f6999;
+    background: #f0f9ff;
+  }
+
+  @media screen and (max-width: 900px) {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+}
+
+.popup__file-icon {
+  font-size: 16px;
+  @media screen and (max-width: 900px) {
+    font-size: 14px;
+  }
+}
+
+.popup__file-text {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.popup__file-remove {
+  background: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: #dc2626;
+    transform: scale(1.1);
+  }
+}
+
+.popup__file-hint {
+  font-family: 'Onest';
+  font-size: 12px;
+  color: #6b7280;
+  margin: 5px 0 0 0;
+  line-height: 1.4;
+
+  @media screen and (max-width: 900px) {
+    font-size: 10px;
   }
 }
 

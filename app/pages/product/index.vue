@@ -69,37 +69,37 @@
         <div class="product__features-grid">
           <ul class="product__list">
             <li class="product__item">
-              • обеспечение постоянного параметра по давлению на выходе в
+              - обеспечение постоянного параметра по давлению на выходе в
               автоматическом режиме;
             </li>
             <li class="product__item">
-              • система запуска резервного насоса в случае аварии или для тех.
+              - система запуска резервного насоса в случае аварии или для тех.
               обслуживания рабочего насоса;
             </li>
             <li class="product__item">
-              • настройка режима работы насосов для оптимальной наработки
+              - настройка режима работы насосов для оптимальной наработки
               оборудования по времени;
             </li>
             <li class="product__item">
-              • использование устройства плавного пуска и частотного
+              - использование устройства плавного пуска и частотного
               преобразователя;
             </li>
             <li class="product__item">
-              • системный контроль и комплексная защита по превышению показателя
+              - системный контроль и комплексная защита по превышению показателя
               тока, по перекосу и чередованию фаз, по тепловому датчику, по
               "сухому ходу", по короткому замыканию в электродвигателе;
             </li>
             <li class="product__item">
-              • включение насосов при восстановлении напряжения в сети и
+              - включение насосов при восстановлении напряжения в сети и
               давления в автоматическом режиме;
             </li>
             <li class="product__item">
-              • интуитивно понятная информационная панель управления на русском
+              - интуитивно понятная информационная панель управления на русском
               языке для контроля работы, смены режимов или расшифровки аварийных
               ситуаций и ошибок;
             </li>
             <li class="product__item">
-              • система диспетчеризации по каналам ModBus RTU.
+              - система диспетчеризации по каналам ModBus RTU.
             </li>
           </ul>
           <div class="product__features-images">
@@ -152,33 +152,29 @@
 
       <!-- Equipment Section -->
       <div class="product__section">
-        <div class="product__section-content">
-          <div class="product__text-content">
-            <p class="product__description">
-              Автоматические насосные установки пожаротушения выполнены с учетом
-              всех требований СП и СНИП и оснащены только высококачественными и
-              надежными комплектующими, зарекомендовавших себя производителей.
-            </p>
-            <p class="product__description">
-              Стандартная комплектация автоматических насосных станций
-              представлена:
-            </p>
-            <ul class="product__list">
-              <li class="product__item">
-                - насосной группой (основной насос, насос в резерве,
-                подпитывающий жокей-насос, дренажный насос при заглубленной
-                установке, компрессор);
-              </li>
-              <li class="product__item">- шкафом управления;</li>
-              <li class="product__item">- запорной арматурой;</li>
-              <li class="product__item">
-                - коллекторами из нержавеющей стали;
-              </li>
-              <li class="product__item">
-                - датчиками и другими элементами автоматики.
-              </li>
-            </ul>
-          </div>
+        <div class="product__text-content">
+          <p class="product__description">
+            Автоматические насосные установки пожаротушения выполнены с учетом
+            всех требований СП и СНИП и оснащены только высококачественными и
+            надежными комплектующими, зарекомендовавших себя производителей.
+          </p>
+          <p class="product__description">
+            Стандартная комплектация автоматических насосных станций
+            представлена:
+          </p>
+          <ul class="product__list">
+            <li class="product__item">
+              - насосной группой (основной насос, насос в резерве, подпитывающий
+              жокей-насос, дренажный насос при заглубленной установке,
+              компрессор);
+            </li>
+            <li class="product__item">- шкафом управления;</li>
+            <li class="product__item">- запорной арматурой;</li>
+            <li class="product__item">- коллекторами из нержавеющей стали;</li>
+            <li class="product__item">
+              - датчиками и другими элементами автоматики.
+            </li>
+          </ul>
         </div>
       </div>
 
@@ -189,39 +185,39 @@
             Возможны дополнительные опции по техническому заданию Заказчика!
           </p>
           <p class="product__subtitle">
-            Автоматические насосные установки "" эффективно выполняют следущие
+            Автоматические насосные установки эффективно выполняют следущие
             задачи:
           </p>
         </div>
         <div class="product__options-content">
           <ul class="product__list">
             <li class="product__item">
-              • -запуск в автоматическом режиме резервного насоса, если рабочий
+              - запуск в автоматическом режиме резервного насоса, если рабочий
               насос не выходит в режим работы;
             </li>
             <li class="product__item">
-              • -запуск рабочего и резервного насосов вручную;
+              - запуск рабочего и резервного насосов вручную;
             </li>
             <li class="product__item">
-              • -запуск резервного электропитания в автоматическом режиме;
+              - запуск резервного электропитания в автоматическом режиме;
             </li>
             <li class="product__item">
-              -системный контроль и комплексная защита по превышению показателя
+              - системный контроль и комплексная защита по превышению показателя
               тока, по перекосу и чередованию фаз, по тепловому датчику, по
               "сухому ходу", по короткому замыканию в электродвигателе;
             </li>
             <li class="product__item">
-              • -система диспетчеризации по каналам ModBus RTU.
+              - система диспетчеризации по каналам ModBus RTU.
             </li>
             <li class="product__item">
-              • -обогрев или охлаждение системы управления,
+              - обогрев или охлаждение системы управления,
             </li>
-            <li class="product__item">• -класс защиты до IP 68,</li>
+            <li class="product__item">- класс защиты до IP 68,</li>
             <li class="product__item">
-              • -система управления одной или несколькими задвижками,
+              - система управления одной или несколькими задвижками,
             </li>
             <li class="product__item">
-              • контроль положения заслонки ручного дискового затвора датчиком
+              контроль положения заслонки ручного дискового затвора датчиком
               SmartfFy.
             </li>
           </ul>
@@ -251,11 +247,6 @@
         <h3 class="product__subtitle">БЛОЧНО-МОДУЛЬНЫЕ НАСОСНЫЕ СТАНЦИИ</h3>
         <div class="product__modular-content">
           <div class="product__text-content">
-            <img
-              src="/img/15.jpeg"
-              alt="product-img-15"
-              class="product__img product__img--large"
-            />
             <p class="product__description">
               Блочно-модульная насосная станция производства компании ООО « ЮГ»
               представляет собой автоматизированный комплекс, состоящий из
@@ -308,12 +299,12 @@
             </p>
             <ul class="product__list">
               <li class="product__item">
-                • станции насосные водяного и пенного пожаротушения;
+                - станции насосные водяного и пенного пожаротушения;
               </li>
-              <li class="product__item">• станции насосные водоснабжения;</li>
-              <li class="product__item">• канализационные насосные станции;</li>
+              <li class="product__item">- станции насосные водоснабжения;</li>
+              <li class="product__item">- канализационные насосные станции;</li>
               <li class="product__item">
-                • станции насосные для систем водяного охлаждения.
+                - станции насосные для систем водяного охлаждения.
               </li>
             </ul>
           </div>
@@ -324,21 +315,21 @@
             </p>
             <ul class="product__list">
               <li class="product__item">
-                • надежное и качественное оборудование импортного производства;
+                - надежное и качественное оборудование импортного производства;
               </li>
               <li class="product__item">
-                • мобильность и возможность транспортировки авто и ж/д
+                - мобильность и возможность транспортировки авто и ж/д
                 транспортом;
               </li>
               <li class="product__item">
-                • стоимость ниже чем у аналогов зарубежных и отечественных
+                - стоимость ниже чем у аналогов зарубежных и отечественных
                 производителей;
               </li>
               <li class="product__item">
-                • минимальное количество занятого персонала;
+                - минимальное количество занятого персонала;
               </li>
               <li class="product__item">
-                • индивидуальный подход (разные комплектации, габаритные
+                - индивидуальный подход (разные комплектации, габаритные
                 размеры, и др. с учетом пожеланий Заказчика).
               </li>
             </ul>
@@ -396,27 +387,27 @@
             </p>
           </div>
           <ul class="product__list">
-            <li class="product__item">• анализ исходящей воды;</li>
+            <li class="product__item">- анализ исходящей воды;</li>
             <li class="product__item">
-              • разработка технико-экономических составляющих для реализации
+              - разработка технико-экономических составляющих для реализации
               проекта;
             </li>
-            <li class="product__item">• аудит объекта;</li>
+            <li class="product__item">- аудит объекта;</li>
             <li class="product__item">
-              • проектирование при помощи специализированных проектных
+              - проектирование при помощи специализированных проектных
               организаций с многолетним опытом работы;
             </li>
             <li class="product__item">
-              • поставка оборудования на индивидуальных финансовых условиях;
+              - поставка оборудования на индивидуальных финансовых условиях;
             </li>
             <li class="product__item">
-              • монтаж, пусконаладочные работы, сдача в эксплуатацию;
+              - монтаж, пусконаладочные работы, сдача в эксплуатацию;
             </li>
             <li class="product__item">
-              • сервисное и гарантийное обслуживание;
+              - сервисное и гарантийное обслуживание;
             </li>
             <li class="product__item">
-              • обучение персонала Заказчика работе с оборудованием.
+              - обучение персонала Заказчика работе с оборудованием.
             </li>
           </ul>
         </div>
@@ -444,9 +435,9 @@
             <p class="product__description">
               В состав модульной котельной входит:
             </p>
-            <ul class="product__list">
+            <ul class="product__list-2" style="margin-bottom: 15px">
               <li class="product__item">
-                - Труба дымовая и подводящие дымоходы;
+                - труба дымовая и подводящие дымоходы;
               </li>
               <li class="product__item">- котел водогрейный;</li>
               <li class="product__item">- горелка блочная;</li>
@@ -479,7 +470,7 @@
               газо-мазутные, твердотопливные.
             </p>
             <p class="product__description">Вид конструкции:</p>
-            <ul class="product__list">
+            <ul class="product__list" style="margin-bottom: 15px">
               <li class="product__item">
                 -отдельное здание, из легких быстровозводимых каркасов
               </li>
@@ -491,7 +482,7 @@
             <p class="product__description">
               Модульная котельная обеспечивает:
             </p>
-            <ul class="product__list">
+            <ul class="product__list-2" style="margin-bottom: 15px">
               <li class="product__item">
                 - автоматическую остановку и пуск горелки;
               </li>
@@ -529,11 +520,11 @@
 
 <style lang="scss" scoped>
 .product {
-  padding: 100px 0 100px 0;
+  padding: 15px 0 15px 0;
   background: #f8fafc;
 
   @media screen and (max-width: 900px) {
-    padding: 70px 0 70px 0;
+    padding: 15px 0 15px 0;
   }
 
   .container {
@@ -544,10 +535,10 @@
 
   // Hero Section
   &__hero {
-    margin-bottom: 50px;
+    margin-bottom: 15px;
     text-align: center;
     @media screen and (max-width: 900px) {
-      margin-bottom: 25px;
+      margin-bottom: 15px;
     }
   }
 
@@ -556,42 +547,45 @@
     font-size: 28px;
     font-weight: 700;
     color: #054263;
-    margin-bottom: 40px;
-    line-height: 1.2;
+    margin-bottom: 15px;
+    line-height: normal;
 
     @media screen and (max-width: 1200px) {
       font-size: 24px;
     }
     @media screen and (max-width: 900px) {
       font-size: 20px;
-      margin-bottom: 30px;
+      margin-bottom: 15px;
     }
   }
 
   &__hero-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    gap: 15px;
     align-items: center;
 
     @media screen and (max-width: 768px) {
       grid-template-columns: 1fr;
-      gap: 30px;
+      // gap: 30px;
     }
   }
 
   &__description {
-    font-family: 'Raleway';
+    font-family: 'Onest';
     font-size: 16px;
-    line-height: 1.6;
-    color: #374151;
-    margin-bottom: 20px;
+    line-height: normal;
+    color: #054263;
+    margin-bottom: 15px;
+    @media screen and (max-width: 900px) {
+      font-size: 14px;
+    }
   }
 
   &__hero-images {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 15px;
 
     @media screen and (max-width: 768px) {
       grid-template-columns: 1fr;
@@ -600,36 +594,35 @@
 
   // Section Blocks
   &__section {
-    margin-bottom: 50px;
-    padding: 40px;
+    margin-bottom: 15px;
+    padding: 15px;
     background: #ffffff;
     border-radius: 12px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     border: 1px solid #e5e7eb;
     @media screen and (max-width: 768px) {
-      padding: 30px 20px;
+      padding: 15px 20px;
     }
-    @media screen and (max-width: 900px) {
-      margin-bottom: 25px;
-    }
+    // @media screen and (max-width: 900px) {
+    //   margin-bottom: 25px;
+    // }
   }
 
   &__section-content {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    gap: 40px;
+    gap: 15px;
     align-items: start;
 
     @media screen and (max-width: 768px) {
       grid-template-columns: 1fr;
-      gap: 30px;
+      gap: 15px;
     }
   }
 
   &__text-content {
     display: flex;
     flex-direction: column;
-    gap: 20px;
   }
 
   &__image-content {
@@ -640,24 +633,20 @@
 
   &__subtitle {
     font-family: 'Onest';
-    font-size: 24px;
-    font-weight: 600;
+    font-size: 16px;
+    line-height: normal;
     color: #054263;
-    margin-bottom: 30px;
-    line-height: 1.3;
+    margin-bottom: 15px;
 
     @media screen and (max-width: 1200px) {
-      font-size: 20px;
-    }
-    @media screen and (max-width: 900px) {
-      margin-bottom: 25px;
+      font-size: 14px;
     }
 
     &--highlight {
-      color: #f59e0b;
+      color: #054263;
       font-weight: 700;
       text-align: center;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
     }
   }
 
@@ -670,14 +659,26 @@
     flex-direction: column;
     gap: 15px;
   }
+  &__list-2 {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    // display: flex;
+    gap: 15px;
+    @media screen and (max-width: 900px) {
+      grid-template-columns: 1fr;
+    }
+  }
 
   &__item {
-    font-family: 'Raleway';
-    font-size: 15px;
-    line-height: 1.6;
-    color: #4b5563;
-    padding: 12px 0;
+    font-family: 'Onest';
+    font-size: 16px;
+    line-height: normal;
+    color: #054263;
     border-bottom: 1px solid #f3f4f6;
+    @media screen and (max-width: 900px) {
+      font-size: 14px;
+    }
 
     &:last-child {
       border-bottom: none;
@@ -688,12 +689,12 @@
   &__features-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    gap: 15px;
     align-items: start;
 
     @media screen and (max-width: 768px) {
       grid-template-columns: 1fr;
-      gap: 30px;
+      gap: 15px;
     }
   }
 
@@ -707,19 +708,19 @@
   &__fire-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    gap: 15px;
     align-items: start;
 
     @media screen and (max-width: 768px) {
       grid-template-columns: 1fr;
-      gap: 30px;
+      gap: 15px;
     }
   }
 
   &__fire-images {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 15px;
 
     @media screen and (max-width: 768px) {
       grid-template-columns: 1fr;
@@ -728,26 +729,26 @@
 
   // Options
   &__options-header {
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     text-align: center;
   }
 
   &__options-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    gap: 15px;
     align-items: start;
 
     @media screen and (max-width: 768px) {
       grid-template-columns: 1fr;
-      gap: 30px;
+      gap: 15px;
     }
   }
 
   &__options-images {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 15px;
 
     @media screen and (max-width: 768px) {
       grid-template-columns: 1fr;
@@ -758,20 +759,20 @@
   &__modular-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    gap: 15px;
     align-items: start;
-    margin-bottom: 40px;
+    margin-bottom: 15px;
 
     @media screen and (max-width: 768px) {
       grid-template-columns: 1fr;
-      gap: 30px;
+      gap: 15px;
     }
   }
 
   &__modular-images {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 15px;
 
     @media screen and (max-width: 768px) {
       grid-template-columns: 1fr;
@@ -779,18 +780,18 @@
   }
 
   &__modular-additional {
-    margin-bottom: 40px;
+    margin-bottom: 15px;
 
     p {
-      margin-bottom: 20px;
+      margin-bottom: 15px;
     }
   }
 
   &__modular-additional-images {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    margin-top: 30px;
+    gap: 15px;
+    margin-top: 15px;
 
     @media screen and (max-width: 768px) {
       grid-template-columns: 1fr;
@@ -800,11 +801,11 @@
   &__modular-info {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    gap: 15px;
 
     @media screen and (max-width: 768px) {
       grid-template-columns: 1fr;
-      gap: 30px;
+      gap: 15px;
     }
   }
 
@@ -812,20 +813,20 @@
   &__modular-advantages {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
   }
 
   // Buildings
   &__buildings-content {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 15px;
   }
 
   &__buildings-images {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    gap: 15px;
 
     @media screen and (max-width: 768px) {
       grid-template-columns: repeat(2, 1fr);
@@ -840,12 +841,12 @@
   &__water-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    gap: 15px;
     align-items: start;
 
     @media screen and (max-width: 768px) {
       grid-template-columns: 1fr;
-      gap: 30px;
+      gap: 15px;
     }
   }
 
@@ -853,17 +854,17 @@
   &__boiler-content {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    // gap: 15px;
   }
 
-  &__boiler-intro,
-  &__boiler-composition,
-  &__boiler-types,
-  &__boiler-features,
+  // &__boiler-intro,
+  // &__boiler-composition,
+  // &__boiler-types,
+  // &__boiler-features,
   &__boiler-summary {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
   }
 
   // Images

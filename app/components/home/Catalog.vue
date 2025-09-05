@@ -66,32 +66,33 @@ import { NuxtLink } from '#components'
 
 <style lang="scss" scoped>
 .catalog {
-  padding: 0px 0 50px 0;
+  padding: 0px 0 15px 0;
   // @media screen and (max-width: 1200px) {
   //   padding: 80px 0 100px 0;
   // }
   @media screen and (max-width: 900px) {
-    padding: 0px 0 25px 0;
+    padding: 0px 0 15px 0;
   }
   &__title {
     font-family: 'Onest';
     font-size: 28px;
     font-weight: 700;
     color: #054263;
-    margin: 0 0 30px 0;
+    margin: 0 0 15px 0;
+    text-align: center;
     @media screen and (max-width: 1200px) {
       font-size: 24px;
     }
     @media screen and (max-width: 900px) {
       font-size: 20px;
-      margin: 0 0 20px 0;
+      margin: 0 0 15px 0;
     }
   }
 
   &__grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    gap: 15px;
     @media screen and (max-width: 1200px) {
       grid-template-columns: repeat(2, 1fr);
     }

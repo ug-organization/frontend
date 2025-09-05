@@ -3,17 +3,144 @@
     <div class="container">
       <div class="about__header">
         <h2 class="about__main-title">О компании</h2>
-        <p class="about__subtitle">
+        <!-- <p class="about__subtitle">
           Профессиональные решения в области инженерных систем
-        </p>
+        </p> -->
       </div>
-
       <div class="about__main-info">
         <div class="about__description-card">
           <p class="about__description-text">
-            <strong>ЮГ</strong> — инжиниринговая организация, специализирующаяся
-            на реализации проектов по тепло- и водоснабжению, водоподготовке и
-            водоотведению, пожаротушению и вентиляции.
+            Производственно-инжиниринговая компания ООО «ЮГ» - ведущая компания
+            в РФ в сфере реализации проектов для систем тепло и водоснабжения,
+            водоотведения, водоподготовки и пожаротушения.
+          </p>
+          <p class="about__description-text">
+            Компания осуществляет свою деятельность с 2008 г. и за годы своей
+            работы успела зарекомендовать себя как надежный поставщик и
+            производитель среди многочисленных заказчиков на всей территории
+            Российской Федерации.
+          </p>
+        </div>
+      </div>
+      <p
+        class="about__description-text"
+        style="text-align: left; margin-bottom: 15px"
+      >
+        Ниже представлены некоторые из объектов:
+      </p>
+      <div class="about__objects">
+        <p class="about__description">
+          1. Модернизация ВгАЗ для производства обожжённых анодов. РусАл, г.
+          Волгоград
+        </p>
+        <p class="about__description">
+          2. Олимпийские объекты: здание Центра корпоративных риемов; Комплекс
+          зданий и сооружений для размещения Олимпийской семьи. Подрядные
+          организации, Краснодарский край, г. Сочи
+        </p>
+        <p class="about__description">
+          3. Объекты АО «КРОКУС». Московская область
+        </p>
+        <p class="about__description">
+          4. Объекты ООО «СМУ-32». Ростовская область, Родионово-Несветайский
+          район
+        </p>
+        <p class="about__description">
+          5. Объекты ПАО «Группа Компаний ПИК». Московская область
+        </p>
+        <p class="about__description">
+          6. Объекты филиала АО «Концерн Росэнергоатом». Ростовская область, г.
+          Волгодонск
+        </p>
+        <p class="about__description">
+          7. Водоснабжение населённых пунктов насосными установками первого и
+          второго подъёмов. Посёлки Нарын, Исатай, Сарайшик, Енбекшил, Богатый,
+          Жамбыл, ММС, Дина Нурпеисова, Ганюшкино, Жана, Кадырка. Казахстан
+        </p>
+
+        <p class="about__description">
+          8. ЖК «Звёздный». ООО «Донстрой», Ростовская область, г.
+          Ростов-на-Дону
+        </p>
+        <p class="about__description">
+          9. Объект культурного назначения «Дом, где 6 декабря 1917 года
+          состоялось объединённое заседание президиумов Советов рабочих и
+          крестьянских депутатов». Белгородская область, г. Старый Оскол
+        </p>
+
+        <p class="about__description">
+          10. Складской комплекс «Национальные Картофельные Системы».
+          Нижегородская область, г. Светлогорск
+        </p>
+
+        <p class="about__description">
+          11. Санаторий-профилакторий «Серебряные ключи». Нижегородская область,
+          г. Сергач
+        </p>
+        <p class="about__description">
+          12. Реконструкция корпуса УПК №º 7 (ДГТУ) Донского государственного
+          технического университета. г. Ростов-на-Дону
+        </p>
+
+        <p class="about__description">
+          13. ЖК «Журавли». Ростовская область, г. Ростов-на-Дону
+        </p>
+        <p class="about__description">
+          14. Объекты ООО «ЕвроХим-ВолгаКалий». Волгоградская область, г.
+          Котельниково
+        </p>
+        <p class="about__description">
+          15. Центр метрологического обеспечения ВВС РФ. Московская область, г.
+          Балашиха
+        </p>
+
+        <p class="about__description">16. ЖК «Чехов». г. Ростов-на-Дону</p>
+        <p class="about__description">
+          17. Складские комплексы. Московская область, д. Андреевское
+        </p>
+        <p class="about__description">
+          18. Кинотеатр «Октябрь». Московская область, г. Люберцы
+        </p>
+        <p class="about__description">
+          19. Аэропорт. Раменский р-н, Московская область
+        </p>
+        <p class="about__description">
+          20. Водоснабжение посёлка. Республика Татарстан, с. Высокая гора
+        </p>
+        <p class="about__description">
+          21. Логистические комплексы OZON. Московская область, Ленинградская
+          область
+        </p>
+
+        <p class="about__description">
+          22. Бондаревская ВЭС. Ставропольский край, г. Ипатово
+        </p>
+        <p class="about__description">
+          23. Гостиничные комплексы. Абхазия, Гагра
+        </p>
+        <p class="about__description">
+          24. Многочисленные объекты в рамках программы благоустройства
+          территорий. Ростовская область
+        </p>
+        <p class="about__description">
+          25. Объект Группа РУСАЛ. Красноярский край, г. Ачинск и многие другие
+          объекты на всей территории РФ
+        </p>
+      </div>
+
+      <!-- 
+      <div class="about__main-info">
+        <div class="about__description-card">
+          <p class="about__description-text">
+            Производственно-инжиниринговая компания ООО «ЮГ» - ведущая компания
+            в РФ в сфере реализации проектов для систем тепло и водоснабжения,
+            водоотведения, водоподготовки и пожаротушения.
+          </p>
+          <p class="about__description-text">
+            Компания осуществляет свою деятельность с 2008 г. и за годы своей
+            работы успела зарекомендовать себя как надежный поставщик и
+            производитель среди многочисленных заказчиков на всей территории
+            Российской Федерации.
           </p>
         </div>
         <div class="about__features">
@@ -161,7 +288,7 @@
             </p>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </section>
 </template>
@@ -170,10 +297,10 @@
 
 <style lang="scss" scoped>
 .about {
-  padding: 100px 0 100px 0;
+  padding: 15px 0 15px 0;
 
   @media screen and (max-width: 900px) {
-    padding: 70px 0 70px 0;
+    padding: 15px 0 15px 0;
   }
 
   .container {
@@ -182,29 +309,29 @@
     padding: 0 20px;
   }
 
-  &__header {
-    text-align: center;
-    margin-bottom: 50px;
+  // &__header {
+  //   text-align: center;
+  //   margin-bottom: 50px;
 
-    @media screen and (max-width: 768px) {
-      margin-bottom: 60px;
-    }
-  }
+  //   @media screen and (max-width: 768px) {
+  //     margin-bottom: 60px;
+  //   }
+  // }
 
   &__main-title {
     font-family: 'Onest';
-    font-size: 32px;
+    font-size: 28px;
     font-weight: 700;
     color: #054263;
+    margin: 0 0 15px 0;
     text-align: center;
-    margin: 0 0 30px 0;
+
     @media screen and (max-width: 1200px) {
       font-size: 24px;
     }
     @media screen and (max-width: 900px) {
-      margin: 0 0 20px 0;
       font-size: 20px;
-      text-align: left;
+      margin: 0 0 10px 0;
     }
   }
 
@@ -225,22 +352,22 @@
 
   // Основная информация
   &__main-info {
-    margin-bottom: 50px;
+    margin-bottom: 15px;
     @media screen and (max-width: 900px) {
-      margin-bottom: 25px;
+      margin-bottom: 15px;
     }
   }
 
   &__description-card {
     background: white;
-    padding: 40px;
+    padding: 15px;
     border-radius: 16px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    margin-bottom: 60px;
+    // margin-bottom: 20px;
 
     @media screen and (max-width: 768px) {
-      padding: 30px 20px;
-      margin-bottom: 40px;
+      // padding: 30px 20px;
+      margin-bottom: 15px;
     }
   }
 
@@ -319,7 +446,20 @@
   .feature-content {
     flex: 1;
   }
-
+  .about__description {
+    margin-bottom: 10px;
+    font-family: 'Onest';
+    font-size: 18px;
+    font-weight: 400;
+    color: #000000;
+    line-height: 1.3;
+    @media screen and (max-width: 1200px) {
+      font-size: 16px;
+    }
+    @media screen and (max-width: 900px) {
+      font-size: 14px;
+    }
+  }
   .feature-title {
     font-family: 'Onest';
     font-size: 18px;
