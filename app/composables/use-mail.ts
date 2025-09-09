@@ -30,7 +30,7 @@ try {
   }
 
   await mail.send({
-    to: 'info@yug-ns.ru',
+    to: 'zakaz@yug-ns.ru',
     subject: 'Новая заявка с сайта "yug-ns.ru"',
     html: `
       <p><strong>Телефон:</strong> ${phone}</p>

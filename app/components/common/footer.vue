@@ -40,8 +40,8 @@
                 alt="mail"
                 class="footer__contact-icon"
               />
-              <a href="mailto:info@yug-ns.ru" class="footer__contact-link"
-                >info@yug-ns.ru</a
+              <a href="mailto:zakaz@yug-ns.ru" class="footer__contact-link"
+                >zakaz@yug-ns.ru</a
               >
             </div>
             <div class="footer__social">
@@ -74,7 +74,7 @@
         <div class="footer__bottom">
           <div class="footer__copyright">
             <p class="footer__copyright-text">
-              &copy; 2024 Производственное предприятие «ЮГ». Все права защищены.
+              &copy; 2015 Производственное предприятие «ЮГ». Все права защищены.
             </p>
             <p class="footer__dev">
               Разработка сайта:

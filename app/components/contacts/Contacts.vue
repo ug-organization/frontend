@@ -53,8 +53,8 @@
             </svg>
           </div>
           <h3 class="contacts__card-title">Email</h3>
-          <a href="mailto:info@yug-ns.ru" class="contacts__card-link"
-            >info@yug-ns.ru</a
+          <a href="mailto:zakaz@yug-ns.ru" class="contacts__card-link"
+            >zakaz@yug-ns.ru</a
           >
         </div>
 
@@ -128,6 +128,18 @@
             Написать в WhatsApp
           </a>
         </div>
+        <div class="contacts__card">
+          <div class="contacts__card-icon-2">
+            <img src="/img/mail-2.png" alt="img" />
+          </div>
+          <h3 class="contacts__card-title" style="opacity: 0">-</h3>
+          <button
+            @click="openPopup"
+            class="btn-reset contacts__card-link contacts__card-button"
+          >
+            Отправить заявку и приложить файл
+          </button>
+        </div>
       </div>
       <div class="maps__component">
         <ClientOnly>
@@ -135,19 +147,33 @@
         </ClientOnly>
       </div>
     </div>
+    <PopUp :is-open="isPopupOpen" @close="closePopup" />
   </section>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import PopUp from '../common/PopUp.vue'
+const isPopupOpen = ref(false)
+const isMobileMenuOpen = ref(false)
+
+const openPopup = () => {
+  isPopupOpen.value = true
+  isMobileMenuOpen.value = false
+}
+
+const closePopup = () => {
+  isPopupOpen.value = false
+}
+</script>
 
 <style lang="scss" scoped>
 .contacts {
-  padding: 100px 0 80px 0;
+  padding: 157px 0 15px 0;
   @media screen and (max-width: 1200px) {
-    padding: 80px 0 80px 0;
+    padding: 130px 0 15px 0;
   }
   @media screen and (max-width: 900px) {
-    padding: 70px 0 80px 0;
+    padding: 15px 0 15px 0;
   }
   &__header {
     text-align: center;
@@ -220,7 +246,9 @@
       padding: 25px 20px;
     }
   }
-
+  &__span {
+    display: inline-block;
+  }
   &__card-icon {
     width: 60px;
     height: 60px;
@@ -249,7 +277,21 @@
       }
     }
   }
+  &__card-icon-2 {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
 
+    @media screen and (max-width: 768px) {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 15px;
+    }
+  }
   &__card-title {
     font-family: 'Onest';
     font-size: 16px;

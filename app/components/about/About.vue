@@ -297,8 +297,10 @@
 
 <style lang="scss" scoped>
 .about {
-  padding: 15px 0 15px 0;
-
+  padding: 157px 0 15px 0;
+  @media screen and (max-width: 1200px) {
+    padding: 130px 0 15px 0;
+  }
   @media screen and (max-width: 900px) {
     padding: 15px 0 15px 0;
   }

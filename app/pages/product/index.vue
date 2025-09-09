@@ -56,7 +56,7 @@
             </ul>
           </div>
           <div class="product__image-content">
-            <img src="/img/3.jpeg" alt="product-img-3" class="product__img" />
+            <img src="/img/3.jpeg" alt="product-img-3" class="product__img-2" />
           </div>
         </div>
       </div>
@@ -103,10 +103,12 @@
             </li>
           </ul>
           <div class="product__features-images">
-            <img src="/img/4.jpeg" alt="product-img-4" class="product__img" />
-            <img src="/img/5.jpeg" alt="product-img-5" class="product__img" />
-            <img src="/img/6.jpeg" alt="product-img-6" class="product__img" />
+            <img src="/img/4.jpeg" alt="product-img-4" class="product__img-2" />
           </div>
+        </div>
+        <div class="product__features-images-2">
+          <img src="/img/5.jpeg" alt="product-img-5" class="product__img" />
+          <img src="/img/6.jpeg" alt="product-img-6" class="product__img" />
         </div>
       </div>
 
@@ -142,11 +144,13 @@
             </p>
           </div>
           <div class="product__fire-images">
-            <img src="/img/7.jpeg" alt="product-img-7" class="product__img" />
-            <img src="/img/8.jpeg" alt="product-img-8" class="product__img" />
-            <img src="/img/9.jpeg" alt="product-img-9" class="product__img" />
-            <img src="/img/10.jpeg" alt="product-img-10" class="product__img" />
+            <img src="/img/7.jpeg" alt="product-img-7" class="product__img-2" />
           </div>
+        </div>
+        <div class="product__fire-images-2">
+          <img src="/img/8.jpeg" alt="product-img-8" class="product__img-2" />
+          <img src="/img/9.jpeg" alt="product-img-9" class="product__img-2" />
+          <img src="/img/10.jpeg" alt="product-img-10" class="product__img-2" />
         </div>
       </div>
 
@@ -222,23 +226,24 @@
             </li>
           </ul>
           <div class="product__options-images">
-            <img src="/img/11.jpeg" alt="product-img-11" class="product__img" />
-            <img
-              src="/img/001.jpeg"
-              alt="product-img-12"
-              class="product__img"
-            />
-            <img
-              src="/img/002.jpeg"
-              alt="product-img-13"
-              class="product__img"
-            />
             <img
               src="/img/003.jpeg"
               alt="product-img-14"
-              class="product__img"
+              class="product__img-2"
             />
           </div>
+        </div>
+        <div class="product__options-images-2">
+          <img
+            src="/img/001.jpeg"
+            alt="product-img-12"
+            class="product__img-2"
+          />
+          <img
+            src="/img/002.jpeg"
+            alt="product-img-13"
+            class="product__img-2"
+          />
         </div>
       </div>
 
@@ -267,8 +272,16 @@
             </p>
           </div>
           <div class="product__modular-images">
-            <img src="/img/16.jpeg" alt="product-img-16" class="product__img" />
-            <img src="/img/17.jpeg" alt="product-img-17" class="product__img" />
+            <img
+              src="/img/16.jpeg"
+              alt="product-img-16"
+              class="product__img-2"
+            />
+            <img
+              src="/img/17.jpeg"
+              alt="product-img-17"
+              class="product__img-2"
+            />
           </div>
         </div>
         <div class="product__modular-additional">
@@ -287,8 +300,16 @@
             затрат монтировать и перемещать насосные станции.
           </p>
           <div class="product__modular-additional-images">
-            <img src="/img/18.jpeg" alt="product-img-18" class="product__img" />
-            <img src="/img/19.jpeg" alt="product-img-19" class="product__img" />
+            <img
+              src="/img/18.jpeg"
+              alt="product-img-18"
+              class="product__img-2"
+            />
+            <img
+              src="/img/19.jpeg"
+              alt="product-img-19"
+              class="product__img-2"
+            />
           </div>
         </div>
         <div class="product__modular-info">
@@ -336,33 +357,6 @@
           </div>
         </div>
       </div>
-
-      <!-- Modular Buildings Section -->
-      <!-- <div class="product__section">
-        <h3 class="product__subtitle">
-          МОДУЛЬНЫЕ ЗДАНИЯ РАЗЛИЧНОГО НАЗНАЧЕНИЯ
-        </h3>
-        <div class="product__buildings-content">
-          <p class="product__description">
-            В ассортименте компании ООО «ЮГ» более 40 сорока наименований
-            готовой продукции модульных зданий различного назначения: автономные
-            и неавтономные туалетные модули, модули охраны, насосные станции
-            автоматического полива, технические помещения, помещения
-            видеонаблюдения, помещения ВРУ, остановки ожидания транспорта,
-            пункты проката инвентаря, рестораны быстрого питания, мобильные
-            медицинские пункты, строительные штабы, торговые, офисные помещения
-            и многое другое. Вся продукция соответствует экологическим нормам и
-            техническим стандартам качества. Может эксплуатироваться в любых
-            природно-климатических
-          </p>
-          <div class="product__buildings-images">
-            <img src="/img/20.jpeg" alt="product-img-20" class="product__img" />
-            <img src="/img/21.jpeg" alt="product-img-21" class="product__img" />
-            <img src="/img/22.jpeg" alt="product-img-22" class="product__img" />
-            <img src="/img/23.jpeg" alt="product-img-23" class="product__img" />
-          </div>
-        </div>
-      </div> -->
 
       <!-- Water Treatment Section -->
       <div class="product__section">
@@ -520,9 +514,10 @@
 
 <style lang="scss" scoped>
 .product {
-  padding: 15px 0 15px 0;
-  background: #f8fafc;
-
+  padding: 157px 0 15px 0;
+  @media screen and (max-width: 1200px) {
+    padding: 130px 0 15px 0;
+  }
   @media screen and (max-width: 900px) {
     padding: 15px 0 15px 0;
   }
@@ -688,7 +683,7 @@
   // Features Grid
   &__features-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
     gap: 15px;
     align-items: start;
 
@@ -699,15 +694,26 @@
   }
 
   &__features-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__features-images-2 {
+    margin-top: 15px;
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+
+    @media screen and (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
   }
 
   // Fire Protection
   &__fire-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
     gap: 15px;
     align-items: start;
 
@@ -718,13 +724,23 @@
   }
 
   &__fire-images {
-    display: grid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     grid-template-columns: 1fr 1fr;
     gap: 15px;
 
     @media screen and (max-width: 768px) {
       grid-template-columns: 1fr;
     }
+  }
+  &__fire-images-2 {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
   }
 
   // Options
@@ -735,7 +751,7 @@
 
   &__options-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
     gap: 15px;
     align-items: start;
 
@@ -746,8 +762,9 @@
   }
 
   &__options-images {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 15px;
 
     @media screen and (max-width: 768px) {
@@ -755,10 +772,19 @@
     }
   }
 
+  &__options-images-2 {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
   // Modular Stations
   &__modular-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 15px;
     align-items: start;
     margin-bottom: 15px;
@@ -770,12 +796,13 @@
   }
 
   &__modular-images {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 15px;
 
     @media screen and (max-width: 768px) {
-      grid-template-columns: 1fr;
+      flex-wrap: wrap;
     }
   }
 
@@ -788,13 +815,14 @@
   }
 
   &__modular-additional-images {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 15px;
     margin-top: 15px;
 
     @media screen and (max-width: 768px) {
-      grid-template-columns: 1fr;
+      flex-wrap: wrap;
     }
   }
 
@@ -877,6 +905,16 @@
     &--large {
       border-radius: 12px;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    }
+  }
+  &__img-2 {
+    width: 350px;
+    height: 400px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      height: auto;
     }
   }
 }

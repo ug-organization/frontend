@@ -1,5 +1,5 @@
 <template>
-  <header class="header">
+  <header class="header" :class="{ header__fixed: isFixed }">
     <div class="container">
       <div class="header__wrapper">
         <img class="header__logo" src="/img/logo.png" alt="logo" />
@@ -16,8 +16,8 @@
           </div>
           <div class="header__contacts-item">
             <img class="header__contacts-img" src="/img/mail.png" alt="mail" />
-            <a href="mailto:info@yug-ns.ru" class="header__contacts-link"
-              >info@yug-ns.ru</a
+            <a href="mailto:zakaz@yug-ns.ru" class="header__contacts-link"
+              >zakaz@yug-ns.ru</a
             >
           </div>
         </div>
@@ -97,7 +97,7 @@
         </div>
         <div class="header__mobile-contacts-item">
           <img src="/img/mail.png" alt="mail" />
-          <a href="mailto:info@yug-ns.ru">info@yug-ns.ru</a>
+          <a href="mailto:zakaz@yug-ns.ru">zakaz@yug-ns.ru</a>
         </div>
       </div>
       <nav class="header__mobile-nav">
@@ -157,18 +157,38 @@ const closePopup = () => {
 const closeMobileMenu = () => {
   isMobileMenuOpen.value = false
 }
+const isFixed = ref(false)
+onMounted(() => {
+  window.addEventListener('scroll', () => {
+    isFixed.value = window.scrollY > 5
+  })
+})
 </script>
 
 <style lang="scss" scoped>
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
   background: #ffffff;
+  transition: all 0.3s ease;
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
   border-bottom: 1px solid #e5e7eb;
-  padding: 25px 0;
-  position: relative;
+  padding: 18px 0;
+
   @media screen and (max-width: 1200px) {
     padding: 15px 0;
   }
+  @media screen and (max-width: 900px) {
+    position: relative;
+  }
+  // &__fixed {
+  //   padding: 15px 0;
+  //   background: rgba(255, 255, 255, 0.98);
+  //   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  // }
   &__wrapper {
     display: flex;
     justify-content: space-between;

@@ -10,12 +10,12 @@ export default defineNuxtConfig({
   },
   modules: ['@primevue/nuxt-module', 'vue-yandex-maps/nuxt', ['nuxt-mail', {
     message: {
-      to: 'info@yug-ns.ru',
+      to: 'zakaz@yug-ns.ru',
     },
     smtp: {
       service: 'timeweb',
       auth: {
-        user: 'info@yug-ns.ru',
+        user: 'zakaz@yug-ns.ru',
         pass: 'YugNs565620)',
       },
       host: "smtp.timeweb.ru",
