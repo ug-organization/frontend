@@ -366,6 +366,8 @@ onMounted(() => {
     &-list {
       display: flex;
       gap: 5px;
+      align-items: flex-start;
+      justify-content: center;
       @media screen and (max-width: 1200px) {
         gap: 3px;
       }
@@ -396,6 +398,12 @@ onMounted(() => {
       transition: color 0.3s ease;
       @media screen and (max-width: 1200px) {
         font-size: 14px;
+      }
+
+      &:first-child {
+        white-space: pre-line;
+        text-align: center;
+        line-height: 1.2;
       }
     }
   }
@@ -572,6 +580,12 @@ onMounted(() => {
       background: #f8fafc;
       border-radius: 12px;
       transition: all 0.3s ease;
+
+      &:first-child {
+        white-space: pre-line;
+        text-align: center;
+        line-height: 1.2;
+      }
 
       &:hover {
         background: #0f6999;

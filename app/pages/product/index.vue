@@ -514,9 +514,9 @@
 
 <style lang="scss" scoped>
 .product {
-  padding: 157px 0 15px 0;
+  padding: 170px 0 15px 0;
   @media screen and (max-width: 1200px) {
-    padding: 130px 0 15px 0;
+    padding: 150px 0 15px 0;
   }
   @media screen and (max-width: 900px) {
     padding: 15px 0 15px 0;

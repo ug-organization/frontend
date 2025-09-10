@@ -100,9 +100,9 @@
 
 <style lang="scss" scoped>
 .hero {
-  padding: 157px 0 15px 0;
+  padding: 170px 0 15px 0;
   @media screen and (max-width: 1200px) {
-    padding: 130px 0 15px 0;
+    padding: 150px 0 15px 0;
   }
   @media screen and (max-width: 900px) {
     padding: 15px 0 15px 0;
@@ -149,17 +149,17 @@
 
   &__description {
     font-family: 'Onest';
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 400;
     line-height: normal;
     color: #054263;
     text-align: center;
     @media screen and (max-width: 1200px) {
       line-height: normal;
-      font-size: 16px;
+      font-size: 18px;
     }
     @media screen and (max-width: 900px) {
-      font-size: 14px;
+      font-size: 16px;
       line-height: 1.5;
       text-align: left;
     }
@@ -278,9 +278,12 @@
 
   &__image {
     display: flex;
-    justify-content: center;
+
     align-items: center;
     position: relative;
+    @media screen and (max-width: 1200px) {
+      justify-content: center;
+    }
   }
 
   &__image-overlay {

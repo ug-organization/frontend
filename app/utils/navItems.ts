@@ -1,6 +1,6 @@
 export const navItems = [
   {
-    title: 'Главная',
+    title: 'Главная\nКаталог',
     to: '/',
   },
   {

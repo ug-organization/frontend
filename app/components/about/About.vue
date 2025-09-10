@@ -30,265 +30,178 @@
       </p>
       <div class="about__objects">
         <p class="about__description">
-          1. Модернизация ВгАЗ для производства обожжённых анодов. РусАл, г.
-          Волгоград
+          1. ТПХ Русклимат. Складское здание с АБК, Владимирская область, г.
+          Киржач. Поставка блочно-модульной станции пожаротушения более 396кВт.
+        </p>
+        <div class="about__image">
+          <img class="about__image-item" src="/img/01.png" alt="img" />
+          <img class="about__image-item" src="/img/02.png" alt="img" />
+
+          <img class="about__image-item" src="/img/04.png" alt="img" />
+          <img class="about__image-item" src="/img/03.png" alt="img" />
+        </div>
+        <p class="about__description">
+          2. Водоснабжение жилого квартала «Новый Город», расположенного на
+          северной окраине г. Гулькевичи, Краснодарский край. Производство и
+          поставка блочно-модульной насосной станции пожаротушения и
+          водоснабжения.
+        </p>
+
+        <div class="about__image">
+          <img src="/img/1.png" alt="img" />
+        </div>
+        <p class="about__description">
+          3. Школа на 120 мест. Дагестан. Производство и поставка
+          блочно-модульной насосной станции пожаротушения.
+        </p>
+        <div class="about__image">
+          <img src="/img/2.png" alt="img" />
+
+          <img src="/img/4.png" alt="img" />
+          <img src="/img/3.png" alt="img" />
+        </div>
+        <p class="about__description">
+          4. Городской парк культуры и отдыха, г. Сальск, пер. Спортивный, 1».
+          Производство и поставка блочно-модульной насосной станции для
+          автополива
+        </p>
+        <div class="about__image">
+          <img src="/img/5.png" alt="img" />
+          <img src="/img/6.png" alt="img" />
+        </div>
+        <p class="about__description">
+          5. Детская больница, ЛНР, г.Краснодон. Производство и поставка
+          блочно-модульной насосной станции пожаротушения
+        </p>
+        <div class="about__image">
+          <img src="/img/7.png" alt="img" />
+          <img src="/img/8.png" alt="img" />
+        </div>
+        <p class="about__description">
+          6. «Элеваторный комплекс вместимостью 30000тонн в окрестностях поселка
+          станции Глушково Глушковского р-на Курской области». Производство и
+          поставка блочно-модульной станции пожаротушения
+        </p>
+        <div class="about__image">
+          <img src="/img/9.png" alt="img" />
+          <img src="/img/10.png" alt="img" />
+          <img src="/img/11.png" alt="img" />
+        </div>
+        <p class="about__description">
+          7. Общество с ограниченной ответственностью «МАЛКОМ-Агро», Тамбовская
+          обл. Производство и поставка блочно-модульной станции пожаротушения
+        </p>
+        <div class="about__image">
+          <img src="/img/12.png" alt="img" />
+          <img src="/img/13.png" alt="img" />
+          <img src="/img/14.png" alt="img" />
+          <img src="/img/15.png" alt="img" />
+        </div>
+        <p class="about__description">
+          8. Металлургический завод ДОН-МЕТАЛЛ. Поставка блочно-модульной
+          станции пожаротушения наземно-подземного типа.
+        </p>
+        <div class="about__image">
+          <img src="/img/16.png" alt="img" />
+          <img src="/img/17.png" alt="img" />
+          <img src="/img/18.png" alt="img" />
+          <img src="/img/19.png" alt="img" />
+        </div>
+        <p class="about__description">
+          9. В/Ч 3667 Ростовская область, поставка блочно-модульной станции
+          пожаротушения
+        </p>
+        <div class="about__image">
+          <img src="/img/20.png" alt="img" />
+          <img src="/img/21.png" alt="img" />
+          <img src="/img/22.png" alt="img" />
+          <img src="/img/23.png" alt="img" />
+        </div>
+        <p class="about__description">
+          10. «Строительство водопроводной сети туристическо-рекреационного
+          комплекса Алания парк (II этап)». Поставка комплекса насосных станций
+          первого и второго подъема воды.
+        </p>
+        <div class="about__image">
+          <img src="/img/25.png" alt="img" />
+          <img src="/img/26.png" alt="img" />
+          <img src="/img/24.png" alt="img" />
+
+          <img src="/img/27.png" alt="img" />
+        </div>
+        <p class="about__description">
+          11. Завод металлоконструкций «ИСТ КОНТЕХ» г. Чита, Поставка
+          блочно-модульной станции пожаротушения и водоснабжения.
+        </p>
+        <div class="about__image">
+          <img src="/img/30.png" alt="img" />
+          <img src="/img/28.png" alt="img" />
+          <img src="/img/29.png" alt="img" />
+
+          <img src="/img/31.png" alt="img" />
+        </div>
+        <p class="about__description">
+          12. Модернизация ВгАЗ для производства обожжённых анодов. РусАл, г.
+          Волгоград.
         </p>
         <p class="about__description">
-          2. Олимпийские объекты: здание Центра корпоративных риемов; Комплекс
+          13. Олимпийские объекты: здание Центра корпоративных приемов; Комплекс
           зданий и сооружений для размещения Олимпийской семьи. Подрядные
-          организации, Краснодарский край, г. Сочи
+          организации, Краснодарский край, г. Сочи.
         </p>
         <p class="about__description">
-          3. Объекты АО «КРОКУС». Московская область
+          14. Объекты АО "КРОКУС", Московская область.
         </p>
         <p class="about__description">
-          4. Объекты ООО «СМУ-32». Ростовская область, Родионово-Несветайский
-          район
+          15. Объекты ООО "СМУ-32", Ростовская область, Родионово-Несветайский
+          район.
         </p>
         <p class="about__description">
-          5. Объекты ПАО «Группа Компаний ПИК». Московская область
+          16. Объекты ПАО "Группа Компаний ПИК", Московская область.
         </p>
         <p class="about__description">
-          6. Объекты филиала АО «Концерн Росэнергоатом». Ростовская область, г.
-          Волгодонск
+          17. Объекты филиала АО "Концерн Росэнергоатом". Ростовская область, г.
+          Волгодонск.
         </p>
         <p class="about__description">
-          7. Водоснабжение населённых пунктов насосными установками первого и
-          второго подъёмов. Посёлки Нарын, Исатай, Сарайшик, Енбекшил, Богатый,
-          Жамбыл, ММС, Дина Нурпеисова, Ганюшкино, Жана, Кадырка. Казахстан
-        </p>
-
-        <p class="about__description">
-          8. ЖК «Звёздный». ООО «Донстрой», Ростовская область, г.
-          Ростов-на-Дону
+          18. Водоснабжение населенных пунктов насосными установками первого и
+          второго подъемов. Поселки Нарын, Исатай, Сарайшик, Енбекшил, Богатый,
+          Жамбыл, ММС, Дина Нурпеисова, Ганюшкино, Жана, Кадырка. Казахстан.
         </p>
         <p class="about__description">
-          9. Объект культурного назначения «Дом, где 6 декабря 1917 года
-          состоялось объединённое заседание президиумов Советов рабочих и
-          крестьянских депутатов». Белгородская область, г. Старый Оскол
-        </p>
-
-        <p class="about__description">
-          10. Складской комплекс «Национальные Картофельные Системы».
-          Нижегородская область, г. Светлогорск
-        </p>
-
-        <p class="about__description">
-          11. Санаторий-профилакторий «Серебряные ключи». Нижегородская область,
-          г. Сергач
+          19. ЖК "Звездный". ООО "Донстрой", Ростовская область, г.
+          Ростов-на-Дону.
         </p>
         <p class="about__description">
-          12. Реконструкция корпуса УПК №º 7 (ДГТУ) Донского государственного
-          технического университета. г. Ростов-на-Дону
-        </p>
-
-        <p class="about__description">
-          13. ЖК «Журавли». Ростовская область, г. Ростов-на-Дону
+          20. Объект культурного назначения «Дом, где 6 декабря 1917 года
+          состоялось объединенное заседание президиумов Советов рабочих и
+          крестьянских депутатов». Бедлгородская область, г. Старый Оскол.
         </p>
         <p class="about__description">
-          14. Объекты ООО «ЕвроХим-ВолгаКалий». Волгоградская область, г.
-          Котельниково
+          21. Складской комплекс "Национальные Картофельные Системы".
+          Нижегородская область, г. Светлогорск.
         </p>
         <p class="about__description">
-          15. Центр метрологического обеспечения ВВС РФ. Московская область, г.
-          Балашиха
-        </p>
-
-        <p class="about__description">16. ЖК «Чехов». г. Ростов-на-Дону</p>
-        <p class="about__description">
-          17. Складские комплексы. Московская область, д. Андреевское
+          22. Санаторий-профилакторий "Серебряные ключи". Нижегородская область,
+          г. Сергач.
         </p>
         <p class="about__description">
-          18. Кинотеатр «Октябрь». Московская область, г. Люберцы
+          23.Реконструкция корпуса УПК № 7 (ДГТУ) Донского государственного
+          технического университета. г. Ростов-на-Дону.
         </p>
         <p class="about__description">
-          19. Аэропорт. Раменский р-н, Московская область
+          24. ЖК "Журавли". Ростовская область, г. Ростов-на-Дону.
         </p>
         <p class="about__description">
-          20. Водоснабжение посёлка. Республика Татарстан, с. Высокая гора
+          25. Объекты ООО "ЕвроХим-ВолгаКалий", Волгоградская область, г.
+          Котельниково.
         </p>
         <p class="about__description">
-          21. Логистические комплексы OZON. Московская область, Ленинградская
-          область
+          26.Центр метрологического обеспечения ВВС РФ. Московская область, г.
+          Балашиха.
         </p>
-
-        <p class="about__description">
-          22. Бондаревская ВЭС. Ставропольский край, г. Ипатово
-        </p>
-        <p class="about__description">
-          23. Гостиничные комплексы. Абхазия, Гагра
-        </p>
-        <p class="about__description">
-          24. Многочисленные объекты в рамках программы благоустройства
-          территорий. Ростовская область
-        </p>
-        <p class="about__description">
-          25. Объект Группа РУСАЛ. Красноярский край, г. Ачинск и многие другие
-          объекты на всей территории РФ
-        </p>
+        <p class="about__description">27. ЖК "Чехов". г. Ростов-на-Дону.</p>
       </div>
-
-      <!-- 
-      <div class="about__main-info">
-        <div class="about__description-card">
-          <p class="about__description-text">
-            Производственно-инжиниринговая компания ООО «ЮГ» - ведущая компания
-            в РФ в сфере реализации проектов для систем тепло и водоснабжения,
-            водоотведения, водоподготовки и пожаротушения.
-          </p>
-          <p class="about__description-text">
-            Компания осуществляет свою деятельность с 2008 г. и за годы своей
-            работы успела зарекомендовать себя как надежный поставщик и
-            производитель среди многочисленных заказчиков на всей территории
-            Российской Федерации.
-          </p>
-        </div>
-        <div class="about__features">
-          <div class="feature-card">
-            <div class="feature-icon">
-              <img src="/img/icons/calendar.svg" alt="Календарь" />
-            </div>
-            <div class="feature-content">
-              <h4 class="feature-title">Опыт работы</h4>
-              <p class="feature-text">Оказываем услуги с 2008 года</p>
-            </div>
-          </div>
-
-          <div class="feature-card">
-            <div class="feature-icon">
-              <img src="/img/icons/shield.svg" alt="Щит" />
-            </div>
-            <div class="feature-content">
-              <h4 class="feature-title">Гарантия качества</h4>
-              <p class="feature-text">Предоставляем гарантию до 5 лет</p>
-            </div>
-          </div>
-
-          <div class="feature-card">
-            <div class="feature-icon">
-              <img src="/img/icons/check.svg" alt="Галочка" />
-            </div>
-            <div class="feature-content">
-              <h4 class="feature-title">Сертифицированное оборудование</h4>
-              <p class="feature-text">
-                В работе используем только проверенные материалы
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="about__section">
-        <h3 class="section-title">Направления работ</h3>
-        <div class="services-grid">
-          <div class="service-item">
-            <div class="service-icon">
-              <img src="/img/icons/audit.svg" alt="Аудит" />
-            </div>
-            <div class="service-content">
-              <p>Аудит существующего объекта и оборудования</p>
-            </div>
-          </div>
-          <div class="service-item">
-            <div class="service-icon">
-              <img src="/img/icons/data.svg" alt="Анализ данных" />
-            </div>
-            <div class="service-content">
-              <p>Сбор и анализ необходимых данных</p>
-            </div>
-          </div>
-          <div class="service-item">
-            <div class="service-icon">
-              <img src="/img/icons/reconstruction.svg" alt="Реконструкция" />
-            </div>
-            <div class="service-content">
-              <p>Рекомендации по реконструкции или новому строительству</p>
-            </div>
-          </div>
-          <div class="service-item">
-            <div class="service-icon">
-              <img src="/img/icons/survey.svg" alt="Изыскания" />
-            </div>
-            <div class="service-content">
-              <p>Инженерные изыскания и формирование отчетов</p>
-            </div>
-          </div>
-          <div class="service-item">
-            <div class="service-icon">
-              <img src="/img/icons/document.svg" alt="Документация" />
-            </div>
-            <div class="service-content">
-              <p>Сопровождение проекта при разработке документации</p>
-            </div>
-          </div>
-          <div class="service-item">
-            <div class="service-icon">
-              <img src="/img/icons/design.svg" alt="Проектирование" />
-            </div>
-            <div class="service-content">
-              <p>Проектирование инженерных систем</p>
-            </div>
-          </div>
-          <div class="service-item">
-            <div class="service-icon">
-              <img src="/img/icons/equipment.svg" alt="Оборудование" />
-            </div>
-            <div class="service-content">
-              <p>Изготовление и поставка оборудования</p>
-            </div>
-          </div>
-          <div class="service-item">
-            <div class="service-icon">
-              <img src="/img/icons/construction.svg" alt="Строительство" />
-            </div>
-            <div class="service-content">
-              <p>Строительно-монтажные и пусконаладочные работы</p>
-            </div>
-          </div>
-          <div class="service-item">
-            <div class="service-icon">
-              <img src="/img/icons/education.svg" alt="Обучение" />
-            </div>
-            <div class="service-content">
-              <p>Обучение и консультирование персонала</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="about__section">
-        <h3 class="section-title">Почему выбирают нас</h3>
-        <div class="advantages-grid">
-          <div class="advantage-card">
-            <h4 class="advantage-title">Индивидуальный подход</h4>
-            <p class="advantage-text">
-              Система скидок и специальные условия для различных типов
-              организаций
-            </p>
-          </div>
-
-          <div class="advantage-card">
-            <h4 class="advantage-title">Долгосрочное партнерство</h4>
-            <p class="advantage-text">
-              Нацеленность на надежность и долгосрочное сотрудничество
-            </p>
-          </div>
-
-          <div class="advantage-card">
-            <h4 class="advantage-title">Экспертный опыт</h4>
-            <p class="advantage-text">
-              Команда специалистов с многолетним стажем в области энергетики
-            </p>
-          </div>
-
-          <div class="advantage-card">
-            <h4 class="advantage-title">Оптимальные решения</h4>
-            <p class="advantage-text">
-              Предлагаем обоснованные альтернативы без потери качества
-            </p>
-          </div>
-        </div>
-      </div> -->
     </div>
   </section>
 </template>
@@ -297,9 +210,9 @@
 
 <style lang="scss" scoped>
 .about {
-  padding: 157px 0 15px 0;
+  padding: 170px 0 15px 0;
   @media screen and (max-width: 1200px) {
-    padding: 130px 0 15px 0;
+    padding: 150px 0 15px 0;
   }
   @media screen and (max-width: 900px) {
     padding: 15px 0 15px 0;
@@ -335,6 +248,13 @@
       font-size: 20px;
       margin: 0 0 10px 0;
     }
+  }
+
+  &__image {
+    margin-bottom: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
   }
 
   &__subtitle {
