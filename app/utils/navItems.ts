@@ -4,7 +4,7 @@ export const navItems = [
     to: '/',
   },
   {
-    title: 'О компании',
+    title: 'О компании\n Выполненные объекты',
     to: '/about',
   },
   {
