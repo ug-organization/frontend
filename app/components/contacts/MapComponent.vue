@@ -15,7 +15,7 @@ const map = shallowRef<null | YMap>(null)
 
 const handleClickOnBtnToMap = () => {
   window.open(
-    'https://yandex.ru/maps?ll=34.358848,53.267493&z=18&l=map&pt=34.358848,53.267493',
+    'https://yandex.ru/maps?ll=49.615552,58.595943&z=18&l=map&pt=49.615552,58.595943',
     '_blank'
   )
 }
