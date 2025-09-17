@@ -10,20 +10,20 @@ export default defineNuxtConfig({
   },
   modules: ['@primevue/nuxt-module', 'vue-yandex-maps/nuxt', ['nuxt-mail', {
     message: {
-      to: 'zakaz@yug-ns.ru',
+      to: process.env.MAIL_TO || 'zakaz@yug-ns.ru',
     },
     smtp: {
-      service: 'timeweb',
+      service: process.env.MAIL_SERVICE || 'timeweb',
       auth: {
-        user: 'zakaz@yug-ns.ru',
-        pass: 'YugNs565620)',
+        user: process.env.MAIL_USER || 'zakaz@yug-ns.ru',
+        pass: process.env.MAIL_PASS || 'YugNs565620)',
       },
-      host: "smtp.timeweb.ru",
-      port: 465,
-      secure: true,
-      requireTLS: true,
+      host: process.env.MAIL_HOST || "smtp.timeweb.ru",
+      port: parseInt(process.env.MAIL_PORT || '465'),
+      secure: process.env.MAIL_SECURE === 'true' || true,
+      requireTLS: process.env.MAIL_REQUIRE_TLS === 'true' || true,
     },
-  }], 'nuxt-mail'],
+  }]],
   primevue: {
     components: {
         prefix: 'Prime',
