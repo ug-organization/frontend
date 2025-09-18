@@ -10,15 +10,15 @@ export default defineNuxtConfig({
   },
   modules: ['@primevue/nuxt-module', 'vue-yandex-maps/nuxt', ['nuxt-mail', {
     message: {
-      to: 'p386666@yandex.ru',
+      to: 'zakaz@yug-ns.ru',
     },
     smtp: {
-      service: 'yandex.ru',
+      service: 'timeweb.ru',
       auth: {
-        user: 'p386666@yandex.ru',
-        pass: 'wfywyxglahuivhep',
+        user: 'zakaz@yug-ns.ru',
+        pass: 'YugNs565620)',
       },
-      host: "smtp.yandex.ru",
+      host: "smtp.timeweb.ru",
       port: 465,
       secure: true,
       requireTLS: true,
