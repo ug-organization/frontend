@@ -55,7 +55,7 @@
                 <PrimeTextarea
                   id="message"
                   v-model="message"
-                  placeholder="Введите ваше сообщение"
+                  placeholder="Введите ваше сообщение. Для больших файлов можете отправить ссылку на WeTransfer, Google Drive или другой файлообменник."
                   rows="4"
                   autocomplete="off"
                 />
@@ -120,7 +120,7 @@
                 </div>
                 <p class="popup__file-hint">
                   Поддерживаемые форматы: PDF, DOC, DOCX, JPG, PNG, GIF, TXT<br />
-                  Максимум 5 МБ на файл, общий размер до 15 МБ<br />
+                  Максимум 2 МБ на файл, общий размер до 5 МБ<br />
                   <small style="color: #6b7280; font-size: 11px">
                     Для больших файлов используйте WeTransfer, Google Drive или
                     отправьте ссылку в сообщении
@@ -156,26 +156,26 @@ const handleFileSelect = (event: Event) => {
   if (target.files && target.files.length > 0) {
     const selectedFiles = Array.from(target.files)
 
-    // Проверяем общий размер файлов (максимум 15 МБ для всех файлов - безопасный лимит для продакшна)
+    // Проверяем общий размер файлов (максимум 5 МБ для всех файлов - очень консервативный лимит)
     const totalSize = [...files.value, ...selectedFiles].reduce(
       (sum, file) => sum + file.size,
       0
     )
-    const maxTotalSize = 15 * 1024 * 1024 // 15 МБ - безопасный лимит для продакшна
+    const maxTotalSize = 5 * 1024 * 1024 // 5 МБ - очень консервативный лимит для продакшна
 
     if (totalSize > maxTotalSize) {
       alert(
-        `Общий размер всех файлов не должен превышать 15 МБ. Текущий размер: ${Math.round(
+        `Общий размер всех файлов не должен превышать 5 МБ. Текущий размер: ${Math.round(
           totalSize / 1024 / 1024
         )} МБ`
       )
       return
     }
 
-    // Проверяем размер каждого отдельного файла (максимум 5 МБ - безопасный лимит)
+    // Проверяем размер каждого отдельного файла (максимум 2 МБ - очень консервативный лимит)
     for (const file of selectedFiles) {
-      if (file.size > 5 * 1024 * 1024) {
-        alert(`Размер файла "${file.name}" не должен превышать 5 МБ`)
+      if (file.size > 2 * 1024 * 1024) {
+        alert(`Размер файла "${file.name}" не должен превышать 2 МБ`)
         return
       }
     }

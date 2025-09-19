@@ -16,6 +16,25 @@ const resetForm = () => {
 
   const handleSubmit = async (phone: string, message: string, filesToSend?: File[]) => {
 try {
+  // Временно убираем проверку размера для тестирования
+  // if (filesToSend && filesToSend.length > 0) {
+  //   const totalSize = filesToSend.reduce((sum, file) => sum + file.size, 0)
+  //   const maxSize = 5 * 1024 * 1024 // 5 МБ - очень консервативный лимит для продакшна
+  //   
+  //   if (totalSize > maxSize) {
+  //     alert(`Общий размер файлов (${Math.round(totalSize / 1024 / 1024)} МБ) превышает лимит сервера (5 МБ). Пожалуйста, уменьшите размер файлов или отправьте их по частям.`)
+  //     return
+  //   }
+
+  //   // Проверяем каждый файл отдельно
+  //   for (const file of filesToSend) {
+  //     if (file.size > 2 * 1024 * 1024) { // 2 МБ на файл
+  //       alert(`Файл "${file.name}" слишком большой (${Math.round(file.size / 1024 / 1024)} МБ). Максимальный размер файла: 2 МБ.`)
+  //       return
+  //     }
+  //   }
+  // }
+
   const mail = useMail()
   
   let attachments = []
@@ -38,32 +57,57 @@ try {
 
   console.log('Отправляем письмо с вложениями:', {
     filesCount: attachments.length,
+    totalSize: filesToSend ? filesToSend.reduce((sum, file) => sum + file.size, 0) : 0,
+    totalSizeMB: filesToSend ? Math.round(filesToSend.reduce((sum, file) => sum + file.size, 0) / 1024 / 1024 * 100) / 100 : 0,
     files: attachments.map(att => ({
       filename: att.filename,
       contentType: att.contentType,
-      contentLength: typeof att.content === 'string' ? att.content.length : 0
+      contentLength: typeof att.content === 'string' ? att.content.length : 0,
+      base64SizeMB: typeof att.content === 'string' ? Math.round(att.content.length * 0.75 / 1024 / 1024 * 100) / 100 : 0
     }))
   })
 
-  await mail.send({
-    from: 'd.kireenkov32rus@yandex.ru',
-    to: 'd.kireenkov@yandex.ru',
-    subject: `Новая заявка с сайта - ${phone}`,
-    html: `
-      <div style="font-family: Arial, sans-serif; max-width: 600px;">
-        <h2 style="color: #054263;">Новая заявка с сайта yug-ns.ru</h2>
-        <p><strong>Телефон:</strong> ${phone}</p>
-        <p><strong>Сообщение:</strong></p>
-        <div style="background: #f5f5f5; padding: 10px; border-radius: 4px;">
-          ${message || 'Сообщение не указано'}
+  // Попробуем отправить письмо без вложений сначала
+  if (attachments.length === 0) {
+    await mail.send({
+      from: 'd.kireenkov32rus@yandex.ru',
+      to: 'd.kireenkov@yandex.ru',
+      subject: `Новая заявка с сайта - ${phone}`,
+      html: `
+        <div style="font-family: Arial, sans-serif; max-width: 600px;">
+          <h2 style="color: #054263;">Новая заявка с сайта yug-ns.ru</h2>
+          <p><strong>Телефон:</strong> ${phone}</p>
+          <p><strong>Сообщение:</strong></p>
+          <div style="background: #f5f5f5; padding: 10px; border-radius: 4px;">
+            ${message || 'Сообщение не указано'}
+          </div>
+          <hr>
+          <small style="color: #666;">Время отправки: ${new Date().toLocaleString('ru-RU')}</small>
         </div>
-        ${filesList ? `<p><strong>Прикрепленные файлы:</strong> ${filesList}</p>` : ''}
-        <hr>
-        <small style="color: #666;">Время отправки: ${new Date().toLocaleString('ru-RU')}</small>
-      </div>
-    `,
-    attachments: attachments
-  })
+      `
+    })
+  } else {
+    // Отправляем с вложениями
+    await mail.send({
+      from: 'd.kireenkov32rus@yandex.ru',
+      to: 'd.kireenkov@yandex.ru',
+      subject: `Новая заявка с сайта - ${phone}`,
+      html: `
+        <div style="font-family: Arial, sans-serif; max-width: 600px;">
+          <h2 style="color: #054263;">Новая заявка с сайта yug-ns.ru</h2>
+          <p><strong>Телефон:</strong> ${phone}</p>
+          <p><strong>Сообщение:</strong></p>
+          <div style="background: #f5f5f5; padding: 10px; border-radius: 4px;">
+            ${message || 'Сообщение не указано'}
+          </div>
+          ${filesList ? `<p><strong>Прикрепленные файлы:</strong> ${filesList}</p>` : ''}
+          <hr>
+          <small style="color: #666;">Время отправки: ${new Date().toLocaleString('ru-RU')}</small>
+        </div>
+      `,
+      attachments: attachments
+    })
+  }
   
   isSuccess.value = true
   resetForm()
