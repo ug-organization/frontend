@@ -33,12 +33,12 @@ export default defineEventHandler(async (event) => {
 
     // Создаем transporter для отправки email
     const transporter = nodemailer.createTransport({
-      host: 'smtp.yandex.ru',
+      host: 'smtp.timeweb.ru',
       port: 587,
       secure: false,
       auth: {
-        user: 'd.kireenkov32rus@yandex.ru',
-        pass: 'hdsolqtgpfzzpfcx'
+        user: 'zakaz@yug-ns.ru',
+        pass: 'YugNs565620)'
       },
       tls: {
         rejectUnauthorized: false
@@ -54,8 +54,8 @@ export default defineEventHandler(async (event) => {
 
     // Отправляем email с вложениями
     const result = await transporter.sendMail({
-      from: 'd.kireenkov32rus@yandex.ru',
-      to: 'd.kireenkov32rus@yandex.ru',
+      from: 'zakaz@yug-ns.ru',
+      to: 'zakaz@yug-ns.ru',
       subject: 'Новая заявка с сайта',
       html: `
         <p><strong>Сообщение:</strong> ${message}</p>
