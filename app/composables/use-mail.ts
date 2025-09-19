@@ -26,23 +26,41 @@ try {
       attachments.push({
         filename: file.name,
         content: base64,
-        contentType: file.type
+        contentType: file.type || 'application/octet-stream',
+        encoding: 'base64'
       })
     }
   }
 
   const filesList = filesToSend && filesToSend.length > 0 
-    ? filesToSend.map(file => file.name).join(', ')
+    ? filesToSend.map(file => `${file.name} (${Math.round(file.size / 1024)} КБ)`).join(', ')
     : ''
+
+  console.log('Отправляем письмо с вложениями:', {
+    filesCount: attachments.length,
+    files: attachments.map(att => ({
+      filename: att.filename,
+      contentType: att.contentType,
+      contentLength: typeof att.content === 'string' ? att.content.length : 0
+    }))
+  })
 
   await mail.send({
     from: 'zakaz@yug-ns.ru',
     to: 'zakaz@yug-ns.ru',
-    subject: 'Новая заявка с сайта "yug-ns.ru"',
+    subject: `Новая заявка с сайта - ${phone}`,
     html: `
-      <p><strong>Телефон:</strong> ${phone}</p>
-      <p><strong>Сообщение:</strong> ${message}</p>
-      ${filesList ? `<p><strong>Прикрепленные файлы:</strong> ${filesList}</p>` : ''}
+      <div style="font-family: Arial, sans-serif; max-width: 600px;">
+        <h2 style="color: #054263;">Новая заявка с сайта yug-ns.ru</h2>
+        <p><strong>Телефон:</strong> ${phone}</p>
+        <p><strong>Сообщение:</strong></p>
+        <div style="background: #f5f5f5; padding: 10px; border-radius: 4px;">
+          ${message || 'Сообщение не указано'}
+        </div>
+        ${filesList ? `<p><strong>Прикрепленные файлы:</strong> ${filesList}</p>` : ''}
+        <hr>
+        <small style="color: #666;">Время отправки: ${new Date().toLocaleString('ru-RU')}</small>
+      </div>
     `,
     attachments: attachments
   })
@@ -71,16 +89,16 @@ try {
   const fileToBase64 = (file: File): Promise<string> => {
     return new Promise((resolve, reject) => {
       const reader = new FileReader()
-      reader.readAsDataURL(file)
+      reader.readAsArrayBuffer(file)
       reader.onload = () => {
-        const result = reader.result as string
-        // Убираем префикс "data:..." и оставляем только base64
-        const base64 = result.split(',')[1]
-        if (base64) {
-          resolve(base64)
-        } else {
-          reject(new Error('Failed to convert file to base64'))
+        const arrayBuffer = reader.result as ArrayBuffer
+        const bytes = new Uint8Array(arrayBuffer)
+        let binary = ''
+        for (let i = 0; i < bytes.byteLength; i++) {
+          binary += String.fromCharCode(bytes[i] || 0)
         }
+        const base64 = btoa(binary)
+        resolve(base64)
       }
       reader.onerror = error => reject(error)
     })

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Тест отправки файлов</title>
+</head>
+<body>
+    <h1>Тест отправки файлов</h1>
+    <form id="testForm">
+        <div>
+            <label>Телефон:</label>
+            <input type="text" id="phone" value="+7 (999) 123-45-67" required>
+        </div>
+        <div>
+            <label>Сообщение:</label>
+            <textarea id="message">Тестовое сообщение для проверки отправки файлов</textarea>
+        </div>
+        <div>
+            <label>Файлы:</label>
+            <input type="file" id="files" multiple accept=".pdf,.doc,.docx,.jpg,.jpeg,.png,.gif,.txt">
+        </div>
+        <button type="submit">Отправить тест</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        document.getElementById('testForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const phone = document.getElementById('phone').value;
+            const message = document.getElementById('message').value;
+            const files = Array.from(document.getElementById('files').files);
+            
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = 'Отправляем...';
+            
+            try {
+                // Тестируем функцию fileToBase64
+                const fileToBase64 = (file) => {
+                    return new Promise((resolve, reject) => {
+                        const reader = new FileReader();
+                        reader.readAsArrayBuffer(file);
+                        reader.onload = () => {
+                            const arrayBuffer = reader.result;
+                            const bytes = new Uint8Array(arrayBuffer);
+                            let binary = '';
+                            for (let i = 0; i < bytes.byteLength; i++) {
+                                binary += String.fromCharCode(bytes[i] || 0);
+                            }
+                            const base64 = btoa(binary);
+                            resolve(base64);
+                        };
+                        reader.onerror = error => reject(error);
+                    });
+                };
+                
+                console.log('Тестируем файлы:', files.map(f => ({
+                    name: f.name,
+                    size: f.size,
+                    type: f.type
+                })));
+                
+                const attachments = [];
+                for (const file of files) {
+                    const base64 = await fileToBase64(file);
+                    attachments.push({
+                        filename: file.name,
+                        content: base64,
+                        contentType: file.type || 'application/octet-stream',
+                        encoding: 'base64'
+                    });
+                }
+                
+                console.log('Вложения подготовлены:', attachments.map(att => ({
+                    filename: att.filename,
+                    contentType: att.contentType,
+                    contentLength: att.content.length
+                })));
+                
+                resultDiv.innerHTML = `
+                    <h3>Результат теста:</h3>
+                    <p>Файлов обработано: ${attachments.length}</p>
+                    <p>Телефон: ${phone}</p>
+                    <p>Сообщение: ${message}</p>
+                    <h4>Файлы:</h4>
+                    <ul>
+                        ${attachments.map(att => `
+                            <li>${att.filename} (${att.contentType}, ${att.content.length} символов base64)</li>
+                        `).join('')}
+                    </ul>
+                `;
+                
+            } catch (error) {
+                console.error('Ошибка теста:', error);
+                resultDiv.innerHTML = `<p style="color: red;">Ошибка: ${error.message}</p>`;
+            }
+        });
+    </script>
+</body>
+</html>

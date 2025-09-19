@@ -22,6 +22,9 @@ export default defineNuxtConfig({
       port: 465,
       secure: true,
       requireTLS: true,
+      tls: {
+        rejectUnauthorized: false
+      }
     },
   }]],
   primevue: {
