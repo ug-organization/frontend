@@ -120,7 +120,11 @@
                 </div>
                 <p class="popup__file-hint">
                   Поддерживаемые форматы: PDF, DOC, DOCX, JPG, PNG, GIF, TXT<br />
-                  Максимум 10 МБ на файл, общий размер до 25 МБ
+                  Максимум 5 МБ на файл, общий размер до 15 МБ<br />
+                  <small style="color: #6b7280; font-size: 11px">
+                    Для больших файлов используйте WeTransfer, Google Drive или
+                    отправьте ссылку в сообщении
+                  </small>
                 </p>
               </div>
               <span class="popup__policy"
@@ -152,26 +156,26 @@ const handleFileSelect = (event: Event) => {
   if (target.files && target.files.length > 0) {
     const selectedFiles = Array.from(target.files)
 
-    // Проверяем общий размер файлов (максимум 25 МБ для всех файлов)
+    // Проверяем общий размер файлов (максимум 15 МБ для всех файлов - безопасный лимит для продакшна)
     const totalSize = [...files.value, ...selectedFiles].reduce(
       (sum, file) => sum + file.size,
       0
     )
-    const maxTotalSize = 25 * 1024 * 1024 // 25 МБ
+    const maxTotalSize = 15 * 1024 * 1024 // 15 МБ - безопасный лимит для продакшна
 
     if (totalSize > maxTotalSize) {
       alert(
-        `Общий размер всех файлов не должен превышать 25 МБ. Текущий размер: ${Math.round(
+        `Общий размер всех файлов не должен превышать 15 МБ. Текущий размер: ${Math.round(
           totalSize / 1024 / 1024
         )} МБ`
       )
       return
     }
 
-    // Проверяем размер каждого отдельного файла (максимум 10 МБ)
+    // Проверяем размер каждого отдельного файла (максимум 5 МБ - безопасный лимит)
     for (const file of selectedFiles) {
-      if (file.size > 10 * 1024 * 1024) {
-        alert(`Размер файла "${file.name}" не должен превышать 10 МБ`)
+      if (file.size > 5 * 1024 * 1024) {
+        alert(`Размер файла "${file.name}" не должен превышать 5 МБ`)
         return
       }
     }
