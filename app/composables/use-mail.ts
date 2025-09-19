@@ -46,8 +46,8 @@ try {
   })
 
   await mail.send({
-    from: 'zakaz@yug-ns.ru',
-    to: 'zakaz@yug-ns.ru',
+    from: 'd.kireenkov32rus@yandex.ru',
+    to: 'd.kireenkov@yandex.ru',
     subject: `Новая заявка с сайта - ${phone}`,
     html: `
       <div style="font-family: Arial, sans-serif; max-width: 600px;">
