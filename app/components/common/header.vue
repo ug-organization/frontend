@@ -377,6 +377,7 @@ onMounted(() => {
       background: #e7f5fc;
       transition: all 0.3s ease;
       border-radius: 6px;
+      display: flex;
       @media screen and (max-width: 1200px) {
         padding: 3px 5px;
       }

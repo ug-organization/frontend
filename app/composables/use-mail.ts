@@ -3,7 +3,7 @@ export function sendMail() {
   const phone = ref('')
   // const name = ref('')
   const message = ref('')
-  const file = ref<File | null>(null)
+  const files = ref<File[]>([])
   const isSuccess = ref(false)
 
 const resetForm = () => {
@@ -11,23 +11,29 @@ const resetForm = () => {
   phone.value = ''
   // name.value = ''
   message.value = ''
-  file.value = null
+  files.value = []
 }
 
-  const handleSubmit = async (phone: string, message: string, file?: File | null) => {
+  const handleSubmit = async (phone: string, message: string, filesToSend?: File[]) => {
 try {
   const mail = useMail()
   
   let attachments = []
-  if (file) {
-    // Конвертируем файл в base64 для отправки
-    const base64 = await fileToBase64(file)
-    attachments.push({
-      filename: file.name,
-      content: base64,
-      contentType: file.type
-    })
+  if (filesToSend && filesToSend.length > 0) {
+    // Конвертируем все файлы в base64 для отправки
+    for (const file of filesToSend) {
+      const base64 = await fileToBase64(file)
+      attachments.push({
+        filename: file.name,
+        content: base64,
+        contentType: file.type
+      })
+    }
   }
+
+  const filesList = filesToSend && filesToSend.length > 0 
+    ? filesToSend.map(file => file.name).join(', ')
+    : ''
 
   await mail.send({
     from: 'zakaz@yug-ns.ru',
@@ -36,7 +42,7 @@ try {
     html: `
       <p><strong>Телефон:</strong> ${phone}</p>
       <p><strong>Сообщение:</strong> ${message}</p>
-      ${file ? `<p><strong>Прикрепленный файл:</strong> ${file.name}</p>` : ''}
+      ${filesList ? `<p><strong>Прикрепленные файлы:</strong> ${filesList}</p>` : ''}
     `,
     attachments: attachments
   })
@@ -59,7 +65,7 @@ try {
       reader.readAsDataURL(file)
       reader.onload = () => {
         const result = reader.result as string
-        // Убираем префикс "data:image/jpeg;base64," и оставляем только base64
+        // Убираем префикс "data:..." и оставляем только base64
         const base64 = result.split(',')[1]
         if (base64) {
           resolve(base64)
@@ -74,7 +80,7 @@ try {
   return {
     phone,
     message,
-    file,
+    files,
     isSuccess,
     handleSubmit,
     resetForm

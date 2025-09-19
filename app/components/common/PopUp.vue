@@ -62,34 +62,54 @@
               </div>
 
               <div class="popup__form-group">
-                <label for="file" class="popup__label">Прикрепить файл</label>
+                <label for="files" class="popup__label">Прикрепить файлы</label>
                 <div class="popup__file-upload">
                   <input
-                    id="file"
+                    id="files"
                     ref="fileInput"
                     type="file"
                     accept=".pdf,.doc,.docx,.jpg,.jpeg,.png,.gif,.txt"
+                    multiple
                     @change="handleFileSelect"
                     class="popup__file-input"
                   />
-                  <label for="file" class="popup__file-label">
+                  <label for="files" class="popup__file-label">
                     <span class="popup__file-icon">📎</span>
                     <span class="popup__file-text">
-                      {{ file ? file.name : 'Выберите файл' }}
+                      {{
+                        files.length > 0
+                          ? `Выбрано файлов: ${files.length}`
+                          : 'Выберите файлы'
+                      }}
                     </span>
                   </label>
                   <button
-                    v-if="file"
+                    v-if="files.length > 0"
                     type="button"
-                    @click="removeFile"
+                    @click="removeAllFiles"
                     class="popup__file-remove"
                   >
                     ✕
                   </button>
                 </div>
+                <div v-if="files.length > 0" class="popup__files-list">
+                  <div
+                    v-for="(file, index) in files"
+                    :key="index"
+                    class="popup__file-item"
+                  >
+                    <span class="popup__file-name">{{ file.name }}</span>
+                    <button
+                      type="button"
+                      @click="removeFile(index)"
+                      class="popup__file-remove-small"
+                    >
+                      ✕
+                    </button>
+                  </div>
+                </div>
                 <p class="popup__file-hint">
-                  Поддерживаемые форматы: PDF, DOC, DOCX, JPG, PNG, GIF, TXT (до
-                  10 МБ)
+                  Поддерживаемые форматы: PDF, DOC, DOCX, JPG, PNG, GIF, TXT
                 </p>
               </div>
               <span class="popup__policy"
@@ -112,34 +132,38 @@
 </template>
 
 <script lang="ts" setup>
-const { phone, message, file, handleSubmit, isSuccess } = sendMail()
+const { phone, message, files, handleSubmit, isSuccess } = sendMail()
 
 const fileInput = ref<HTMLInputElement | null>(null)
 
 const handleFileSelect = (event: Event) => {
   const target = event.target as HTMLInputElement
-  if (target.files && target.files[0]) {
-    const selectedFile = target.files[0]
+  if (target.files && target.files.length > 0) {
+    const selectedFiles = Array.from(target.files)
 
-    // Проверяем размер файла (10 МБ)
-    if (selectedFile.size > 10 * 1024 * 1024) {
-      alert('Размер файла не должен превышать 10 МБ')
-      return
+    // Добавляем новые файлы к существующим
+    files.value = [...files.value, ...selectedFiles]
+
+    // Очищаем input для возможности повторного выбора тех же файлов
+    if (fileInput.value) {
+      fileInput.value.value = ''
     }
-
-    file.value = selectedFile
   }
 }
 
-const removeFile = () => {
-  file.value = null
+const removeFile = (index: number) => {
+  files.value.splice(index, 1)
+}
+
+const removeAllFiles = () => {
+  files.value = []
   if (fileInput.value) {
     fileInput.value.value = ''
   }
 }
 
 const submitForm = async () => {
-  await handleSubmit(phone.value, message.value, file.value)
+  await handleSubmit(phone.value, message.value, files.value)
 }
 
 interface Props {
@@ -444,6 +468,55 @@ const closePopup = () => {
 
   @media screen and (max-width: 900px) {
     font-size: 10px;
+  }
+}
+
+.popup__files-list {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.popup__file-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  background: #f3f4f6;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+}
+
+.popup__file-name {
+  font-family: 'Onest';
+  font-size: 12px;
+  color: #374151;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: 8px;
+}
+
+.popup__file-remove-small {
+  background: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 10px;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+
+  &:hover {
+    background: #dc2626;
+    transform: scale(1.1);
   }
 }
 
