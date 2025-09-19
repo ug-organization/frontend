@@ -55,8 +55,7 @@
                 <PrimeTextarea
                   id="message"
                   v-model="message"
-                  placeholder="Введите ваше сообщение. Для больших файлов можете отправить ссылку на WeTransfer, Google Drive или другой файлообменник."
-                  rows="4"
+                  placeholder="Введите ваше сообщение."
                   autocomplete="off"
                 />
               </div>
@@ -68,40 +67,17 @@
                     id="files"
                     ref="fileInput"
                     type="file"
-                    accept=".pdf,.doc,.docx,.jpg,.jpeg,.png,.gif,.txt"
                     multiple
-                    @change="handleFileSelect"
                     class="popup__file-input"
+                    @change="handleFileChange"
                   />
                   <label for="files" class="popup__file-label">
                     <span class="popup__file-icon">📎</span>
-                    <span class="popup__file-text">
-                      {{
-                        files.length > 0
-                          ? `Выбрано файлов: ${files.length} (${
-                              Math.round(
-                                (files.reduce(
-                                  (sum, file) => sum + file.size,
-                                  0
-                                ) /
-                                  1024 /
-                                  1024) *
-                                  10
-                              ) / 10
-                            } МБ)`
-                          : 'Выберите файлы'
-                      }}
-                    </span>
+                    <span class="popup__file-text">Выберите файлы</span>
                   </label>
-                  <button
-                    v-if="files.length > 0"
-                    type="button"
-                    @click="removeAllFiles"
-                    class="popup__file-remove"
-                  >
-                    ✕
-                  </button>
                 </div>
+
+                <!-- Показываем выбранные файлы -->
                 <div v-if="files.length > 0" class="popup__files-list">
                   <div
                     v-for="(file, index) in files"
@@ -111,21 +87,13 @@
                     <span class="popup__file-name">{{ file.name }}</span>
                     <button
                       type="button"
-                      @click="removeFile(index)"
                       class="popup__file-remove-small"
+                      @click="files.splice(index, 1)"
                     >
                       ✕
                     </button>
                   </div>
                 </div>
-                <p class="popup__file-hint">
-                  Поддерживаемые форматы: PDF, DOC, DOCX, JPG, PNG, GIF, TXT<br />
-                  Максимум 2 МБ на файл, общий размер до 5 МБ<br />
-                  <small style="color: #6b7280; font-size: 11px">
-                    Для больших файлов используйте WeTransfer, Google Drive или
-                    отправьте ссылку в сообщении
-                  </small>
-                </p>
               </div>
               <span class="popup__policy"
                 >Нажимая на кнопку, вы даёте согласие на обработку персональных
@@ -149,55 +117,14 @@
 <script lang="ts" setup>
 const { phone, message, files, handleSubmit, isSuccess } = sendMail()
 
-const fileInput = ref<HTMLInputElement | null>(null)
+const fileInput = ref<HTMLInputElement>()
 
-const handleFileSelect = (event: Event) => {
+const handleFileChange = (event: Event) => {
   const target = event.target as HTMLInputElement
-  if (target.files && target.files.length > 0) {
-    const selectedFiles = Array.from(target.files)
-
-    // Проверяем общий размер файлов (максимум 5 МБ для всех файлов - очень консервативный лимит)
-    const totalSize = [...files.value, ...selectedFiles].reduce(
-      (sum, file) => sum + file.size,
-      0
-    )
-    const maxTotalSize = 5 * 1024 * 1024 // 5 МБ - очень консервативный лимит для продакшна
-
-    if (totalSize > maxTotalSize) {
-      alert(
-        `Общий размер всех файлов не должен превышать 5 МБ. Текущий размер: ${Math.round(
-          totalSize / 1024 / 1024
-        )} МБ`
-      )
-      return
-    }
-
-    // Проверяем размер каждого отдельного файла (максимум 2 МБ - очень консервативный лимит)
-    for (const file of selectedFiles) {
-      if (file.size > 2 * 1024 * 1024) {
-        alert(`Размер файла "${file.name}" не должен превышать 2 МБ`)
-        return
-      }
-    }
-
-    // Добавляем новые файлы к существующим
-    files.value = [...files.value, ...selectedFiles]
-
-    // Очищаем input для возможности повторного выбора тех же файлов
-    if (fileInput.value) {
-      fileInput.value.value = ''
-    }
-  }
-}
-
-const removeFile = (index: number) => {
-  files.value.splice(index, 1)
-}
-
-const removeAllFiles = () => {
-  files.value = []
-  if (fileInput.value) {
-    fileInput.value.value = ''
+  console.log('Files selected:', target.files)
+  if (target.files) {
+    files.value = Array.from(target.files)
+    console.log('Files array:', files.value)
   }
 }
 
