@@ -73,12 +73,26 @@
                   />
                   <label for="files" class="popup__file-label">
                     <span class="popup__file-icon">📎</span>
-                    <span class="popup__file-text">Выберите файлы</span>
+                    <span class="popup__file-text"
+                      >Выберите файлы (можно несколько)</span
+                    >
                   </label>
                 </div>
 
                 <!-- Показываем выбранные файлы -->
                 <div v-if="files.length > 0" class="popup__files-list">
+                  <div class="popup__files-header">
+                    <p class="popup__files-count">
+                      Выбрано файлов: {{ files.length }}
+                    </p>
+                    <button
+                      type="button"
+                      class="popup__clear-all"
+                      @click="files.length = 0"
+                    >
+                      Очистить все
+                    </button>
+                  </div>
                   <div
                     v-for="(file, index) in files"
                     :key="index"
@@ -123,8 +137,15 @@ const handleFileChange = (event: Event) => {
   const target = event.target as HTMLInputElement
   console.log('Files selected:', target.files)
   if (target.files) {
-    files.value = Array.from(target.files)
-    console.log('Files array:', files.value)
+    // Добавляем новые файлы к уже выбранным
+    const newFiles = Array.from(target.files)
+    files.value = [...files.value, ...newFiles]
+    console.log('Total files:', files.value.length)
+
+    // Очищаем input для возможности повторного выбора тех же файлов
+    if (fileInput.value) {
+      fileInput.value.value = ''
+    }
   }
 }
 
@@ -442,6 +463,42 @@ const closePopup = () => {
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
+
+.popup__files-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.popup__files-count {
+  font-family: 'Onest';
+  font-size: 12px;
+  color: #054263;
+  font-weight: 600;
+  margin: 0;
+  background: #f0f9ff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid #0f6999;
+}
+
+.popup__clear-all {
+  font-family: 'Onest';
+  font-size: 11px;
+  color: #ef4444;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 4px;
+  padding: 4px 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: #fee2e2;
+    border-color: #fca5a5;
+  }
 }
 
 .popup__file-item {
