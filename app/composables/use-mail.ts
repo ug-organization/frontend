@@ -41,11 +41,10 @@ try {
   if (filesToSend && filesToSend.length > 0) {
     // Конвертируем все файлы в base64 для отправки
     for (const file of filesToSend) {
-      const base64 = await fileToBase64(file)
+      const fileBase64 = await fileToBase64(file)
       attachments.push({
         filename: file.name,
-        content: base64,
-        contentType: file.type || 'application/octet-stream',
+        content: fileBase64,
         encoding: 'base64'
       })
     }
@@ -61,7 +60,6 @@ try {
     totalSizeMB: filesToSend ? Math.round(filesToSend.reduce((sum, file) => sum + file.size, 0) / 1024 / 1024 * 100) / 100 : 0,
     files: attachments.map(att => ({
       filename: att.filename,
-      contentType: att.contentType,
       contentLength: typeof att.content === 'string' ? att.content.length : 0,
       base64SizeMB: typeof att.content === 'string' ? Math.round(att.content.length * 0.75 / 1024 / 1024 * 100) / 100 : 0
     }))
@@ -133,18 +131,16 @@ try {
   const fileToBase64 = (file: File): Promise<string> => {
     return new Promise((resolve, reject) => {
       const reader = new FileReader()
-      reader.readAsArrayBuffer(file)
+      reader.readAsDataURL(file)
       reader.onload = () => {
-        const arrayBuffer = reader.result as ArrayBuffer
-        const bytes = new Uint8Array(arrayBuffer)
-        let binary = ''
-        for (let i = 0; i < bytes.byteLength; i++) {
-          binary += String.fromCharCode(bytes[i] || 0)
+        const base64String = reader.result?.toString().split(',')[1]
+        if (base64String) {
+          resolve(base64String)
+        } else {
+          reject(new Error('Failed to convert file to base64'))
         }
-        const base64 = btoa(binary)
-        resolve(base64)
       }
-      reader.onerror = error => reject(error)
+      reader.onerror = (error) => reject(error)
     })
   }
 
