@@ -78,7 +78,17 @@
                     <span class="popup__file-text">
                       {{
                         files.length > 0
-                          ? `Выбрано файлов: ${files.length}`
+                          ? `Выбрано файлов: ${files.length} (${
+                              Math.round(
+                                (files.reduce(
+                                  (sum, file) => sum + file.size,
+                                  0
+                                ) /
+                                  1024 /
+                                  1024) *
+                                  10
+                              ) / 10
+                            } МБ)`
                           : 'Выберите файлы'
                       }}
                     </span>
@@ -109,7 +119,8 @@
                   </div>
                 </div>
                 <p class="popup__file-hint">
-                  Поддерживаемые форматы: PDF, DOC, DOCX, JPG, PNG, GIF, TXT
+                  Поддерживаемые форматы: PDF, DOC, DOCX, JPG, PNG, GIF, TXT<br />
+                  Максимум 10 МБ на файл, общий размер до 25 МБ
                 </p>
               </div>
               <span class="popup__policy"
@@ -140,6 +151,30 @@ const handleFileSelect = (event: Event) => {
   const target = event.target as HTMLInputElement
   if (target.files && target.files.length > 0) {
     const selectedFiles = Array.from(target.files)
+
+    // Проверяем общий размер файлов (максимум 25 МБ для всех файлов)
+    const totalSize = [...files.value, ...selectedFiles].reduce(
+      (sum, file) => sum + file.size,
+      0
+    )
+    const maxTotalSize = 25 * 1024 * 1024 // 25 МБ
+
+    if (totalSize > maxTotalSize) {
+      alert(
+        `Общий размер всех файлов не должен превышать 25 МБ. Текущий размер: ${Math.round(
+          totalSize / 1024 / 1024
+        )} МБ`
+      )
+      return
+    }
+
+    // Проверяем размер каждого отдельного файла (максимум 10 МБ)
+    for (const file of selectedFiles) {
+      if (file.size > 10 * 1024 * 1024) {
+        alert(`Размер файла "${file.name}" не должен превышать 10 МБ`)
+        return
+      }
+    }
 
     // Добавляем новые файлы к существующим
     files.value = [...files.value, ...selectedFiles]
